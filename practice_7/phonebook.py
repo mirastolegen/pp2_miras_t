@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py -->
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" class="js-focus-visible" data-js-focus-visible="" data-turbo-loaded=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 2147483647;
+  transition:
+    width 300ms ease-out,
+    opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+</style><style>
+:root {
+  --fontStack-monospace: "Monaspace Neon", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+}
+</style>
+
+
+
+
+  
+    
+  <link rel="dns-prefetch" href="https://github.githubassets.com/">
+  <link rel="dns-prefetch" href="https://avatars.githubusercontent.com/">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com/">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+  <link rel="preconnect" href="https://github.githubassets.com/" crossorigin="">
+  <link rel="preconnect" href="https://avatars.githubusercontent.com/">
+
+  
+
+
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/light-0c8222dcd7a4f9b7.css"><link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/dark-fc6eec18532c3ae0.css"><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-51c0c6e0c085cc0f.css"><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-4dd12c5689d6b012.css"><link data-color-theme="light_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind_high_contrast-dfa0c9e22ba6ba2b.css"><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-9fd9c8859395d1a8.css"><link data-color-theme="light_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia_high_contrast-9c32304a2a8ac631.css"><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-96d7b2bab5a6ae4e.css"><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-0c6ca283d4d35cea.css"><link data-color-theme="dark_colorblind_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind_high_contrast-2dc46b4919fae81e.css"><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-271332ec9362e8d3.css"><link data-color-theme="dark_tritanopia_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia_high_contrast-eb5bb84e91d6d553.css"><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-f3aa862f2ac7ead2.css"><link data-color-theme="dark_dimmed_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed_high_contrast-206b6b93f856629b.css">
+
+  <style type="text/css">
+    :root {
+      --tab-size-preference: 4;
+    }
+
+    pre, code {
+      tab-size: var(--tab-size-preference);
+    }
+  </style>
+
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/primer-primitives-10bf9dd67e3d70bd.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/primer-0fcd9af82350aeda.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/global-0bd78641c0a1f3e0.css">
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/github-c94ab8d1f22049a8.css">
+  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/repository-6ec84ae2261fecf8.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/code-2d31826944fd3be8.css">
+
+  
+
+  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["actions_custom_images_storage_billing_ui_visibility","actions_image_version_event","actions_service_container_command","actions_workflow_language_service_allow_case_function","alternate_user_config_repo","arianotify_comprehensive_migration","batch_suggested_changes","billing_discount_threshold_notification","billing_ui_budget_pagination_enabled","code_scanning_all_branch_query","code_scanning_dfa_degraded_experience_notice","codemirror_inp_optimizations","codeowners_validation_in_diff","codespaces_prebuild_region_target_update","coding_agent_model_selection","coding_agent_model_selection_all_skus","comment_viewer_copy_raw_markdown","contentful_primer_code_blocks","copilot_agent_image_upload","copilot_agent_snippy","copilot_api_agentic_issue_marshal_yaml","copilot_ask_mode_dropdown","copilot_capi_error_response_telemetry","copilot_chat_attach_multiple_images","copilot_chat_clear_model_selection_for_default_change","copilot_chat_disable_model_picker_while_streaming","copilot_chat_enable_tool_call_logs","copilot_chat_explain_error_user_model","copilot_chat_file_redirect","copilot_chat_input_commands","copilot_chat_opening_thread_switch","copilot_chat_reduce_quota_checks","copilot_chat_search_bar_redirect","copilot_chat_selection_attachments","copilot_chat_vision_in_claude","copilot_chat_vision_preview_gate","copilot_coding_agent_free_users_exp","copilot_coding_agent_task_response","copilot_custom_copilots","copilot_custom_copilots_feature_preview","copilot_diff_explain_conversation_intent","copilot_diff_reference_context","copilot_duplicate_thread","copilot_extensions_hide_in_dotcom_chat","copilot_extensions_removal_on_marketplace","copilot_features_sql_server_logo","copilot_features_zed_logo","copilot_file_block_ref_matching","copilot_ftp_hyperspace_upgrade_prompt","copilot_icebreakers_experiment_dashboard","copilot_icebreakers_experiment_hyperspace","copilot_immersive_code_block_transition_wrap","copilot_immersive_embedded","copilot_immersive_embedded_mode","copilot_immersive_file_block_transition_open","copilot_immersive_file_preview_keep_mounted","copilot_immersive_job_result_preview","copilot_immersive_layout_routes","copilot_immersive_structured_model_picker","copilot_immersive_task_hyperlinking","copilot_immersive_task_within_chat_thread","copilot_issue_list_show_more","copilot_mc_cli_resume_any_users_task","copilot_mission_control_always_send_integration_id","copilot_mission_control_cli_resume_with_task_id","copilot_mission_control_custom_agent_group","copilot_mission_control_decoupled_mode","copilot_mission_control_decoupled_mode_agent_tooltip","copilot_mission_control_initial_data_spinner","copilot_mission_control_lazy_load_pr_data","copilot_mission_control_scroll_to_bottom_button","copilot_mission_control_task_alive_updates","copilot_org_policy_page_focus_mode","copilot_premium_request_quotas","copilot_redirect_header_button_to_agents","copilot_resource_panel","copilot_scroll_preview_tabs","copilot_share_active_subthread","copilot_spaces_ga","copilot_spaces_individual_policies_ga","copilot_spaces_pagination","copilot_spark_empty_state","copilot_spark_handle_nil_friendly_name","copilot_swe_agent_hide_model_picker_if_only_auto","copilot_swe_agent_pr_comment_model_picker","copilot_swe_agent_use_subagents","copilot_task_api_github_rest_style","copilot_unconfigured_is_inherited","copilot_usage_metrics_ga","copilot_workbench_slim_line_top_tabs","custom_instructions_file_references","custom_properties_consolidate_default_value_input","dashboard_indexeddb_caching","dashboard_lists_max_age_filter","dashboard_universe_2025","dashboard_universe_2025_feedback_dialog","dead_click_detection","fgpat_permissions_selector_redesign","flex_cta_groups_mvp","global_nav_react","hide_groups_list_for_few_groups","hyperspace_2025_logged_out_batch_1","hyperspace_2025_logged_out_batch_2","hyperspace_2025_logged_out_batch_3","ipm_global_transactional_message_agents","ipm_global_transactional_message_copilot","ipm_global_transactional_message_issues","ipm_global_transactional_message_prs","ipm_global_transactional_message_repos","ipm_global_transactional_message_spaces","issue_cca_modal_open","issue_cca_visualization","issue_fields_global_search","issue_fields_visibility_indicator","issue_fields_visibility_settings","issues_dashboard_inp_optimization","issues_diff_based_label_updates","issues_expanded_file_types","issues_index_semantic_search","issues_item_picker_display_in_viewport_inside_portal","issues_lazy_load_comment_box_suggestions","issues_react_bots_timeline_pagination","issues_react_chrome_container_query_fix","issues_react_include_bots_in_pickers","issues_react_prohibit_title_fallback","issues_react_ui_feedback","issues_search_type_gql","landing_pages_ninetailed","landing_pages_web_vitals_tracking","lifecycle_label_name_updates","load_paginated_threads_on_diff","marketing_pages_search_explore_provider","memex_default_issue_create_repository","memex_live_update_hovercard","memex_mwl_filter_field_delimiter","memex_remove_deprecated_type_issue","memex_roadmap_drag_style","merge_status_header_feedback","mission_control_retry_on_401","notifications_menu_defer_labels","oauth_authorize_clickjacking_protection","pr_sfv_new_diff_fetch","primer_react_css_has_selector_perf","primer_react_overlay_max_height_clamp_to_viewport","primer_react_spinner_synchronize_animations","prs_checks_react","prs_conversations_react","prs_live_updates_issue_comments","prs_review_summaries_in_side_panel","prx_files","pull_request_edit_button_redesign","pull_request_files_accurate_size_estimates","pull_request_files_virtualization","pull_request_merge_status_button","pull_request_virtualization_extended_limit","pull_request_virtualization_preload_diffs","react_blob_overlay","repo_traffic_hovercards","repository_suggester_elastic_search","rules_insights_filter_bar_created","sample_network_conn_type","secret_scanning_pattern_alerts_link","session_logs_ungroup_reasoning_text","site_features_copilot_universe","site_homepage_collaborate_video","site_safe_optional","spark_prompt_secret_scanning","spark_server_connection_status","suppress_automated_browser_vitals","viewscreen_sandbox","webp_support","workbench_store_readonly"],"login":"mirastolegen","copilotApiOverrideUrl":"https://api.individual.githubcopilot.com"}</script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/wp-runtime-9b576282bd1ff23c.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/fetch-utilities-78a4114cfa572239.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/85924-e131bec5f99667e1.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/28839-734cb6d8a7150172.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/34646-edd5528648c197b1.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/environment-51c0968cf21c176d.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/runtime-helpers-3bb6f7d6b7a2f531.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/2966-f6796bfd155feae1.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/96232-69d46a31854353d4.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/41013-7a6deee6d6ff15eb.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/51210-3abb7238871a5b29.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/64247-7de91c52a8aca0eb.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/31721-17b28a26ab4c2e02.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/46740-6606b1026a237412.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/39130-334926c8365e947c.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/github-elements-459d4cd7a0f718d7.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/element-registry-bd6bd25e442b0f29.js.Без названия" defer="defer"></script>
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/61110-93cf7706e5dc8bfa.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/26533-4df1172b25427069.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/66385-9fabdb6ffe6a94cf.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/93716-c0d708c7899c4298.js.Без названия" defer="defer"></script>
+
+
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/61025-40fd5e83cbe4bc66.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/89627-fbbd31c43d83e10c.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/49029-32f138b26aa15ad8.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/99328-5e06da57c4622e21.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/behaviors-9ddaeb4e06adcb60.js.Без названия" defer="defer"></script>
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/react-core.27e21bcb26e3f432.module.css">
+<script crossorigin="anonymous" type="module" src="./phonebook_files/4244-d5dcb589fae0ecbf.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/notifications-global-206312e9c9776c21.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/34140-bd56b738d77cb446.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/code-menu-34c67a8e6616ccae.js.Без названия" defer="defer"></script>
+  
+  
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/7463-f34e26efc84a7578.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/32769-329cba91f224b6ee.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/46148-0e40187c0246d203.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/1364-fb34d7e0e3afce8e.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/73065-3db8391bce658e42.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/9521-91c5deeb12670dc8.js.Без названия" defer="defer"></script>
+
+
+
+
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/36600-16cb2bc7b4c03552.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/18222-498ac30c45b2263a.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/96755-8619cf5f811a4353.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/4916-0bfc34c2a17f11be.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/17363-9d3b6dc38025c8e2.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/1097-b805267515cb2087.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/13333-2a2decebccdb5c1f.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/5289-399a52981b09bfae.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/99008-a72c5aa4af4fe634.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/92141-d0d22dca59a46461.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/29621-58d7abba98d5889c.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/86923-89ea77ea52c74b25.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/49972-40a4b0a31a6433a6.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/42229-7263ba561894cf96.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/21384-e21751c702301a47.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/23317-cf160f1428d9be3f.js.Без названия" defer="defer"></script>
+
+<script crossorigin="anonymous" type="module" src="./phonebook_files/26497-3db8876731818fda.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/70198-f7f1df5503683a6b.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/45106-197ebc11e66a756f.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/43690-54c7c87921b42753.js.Без названия" defer="defer"></script>
+<script crossorigin="anonymous" type="module" src="./phonebook_files/code-view-4bf665cef4fb8de3.js.Без названия" defer="defer"></script>
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/primer-react-css.f296da2f85469022.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/92141.14f67539e616d3dd.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/70198.c01a66b33162633c.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/43690.58a5ccc272fc394d.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/code-view.b9c247db17cb5419.module.css">
+
+
+  <title>best-codes/Practice7/phonebook.py at main · Vasemos/best-codes</title>
+
+
+
+  <meta name="route-pattern" content="/:user_id/:repository/blob/*name(/*path)" data-turbo-transient="">
+  <meta name="route-controller" content="blob" data-turbo-transient="">
+  <meta name="route-action" content="show" data-turbo-transient="">
+  <meta name="fetch-nonce" content="v2:ee958264-7bb2-844b-95c0-1f365c59972e">
+
+    
+  <meta name="current-catalog-service-hash" content="f3abb0cc802f3d7b95fc8762b94bdcb13bf39634c40c357301c4aa1d67a256fb">
+
+
+  <meta name="request-id" content="331F:13A1FF:19ABE24:102C557:69D4BC1C" data-turbo-transient="true"><meta name="html-safe-nonce" content="d218844ca80a2014331365beee39fa5c0c90516c1cdca9854007b7436fabf3a8" data-turbo-transient="true"><meta name="visitor-payload" content="eyJyZWZlcnJlciI6Imh0dHBzOi8vZ2l0aHViLmNvbS9WYXNlbW9zL2Jlc3QtY29kZXMvYmxvYi9tYWluL1ByYWN0aWNlNy9waG9uZWJvb2sucHkiLCJyZXF1ZXN0X2lkIjoiMzMxRjoxM0ExRkY6MTlBQkUyNDoxMDJDNTU3OjY5RDRCQzFDIiwidmlzaXRvcl9pZCI6IjY3NjU5NTIzNDA2Nzk1MzY0NTYiLCJyZWdpb25fZWRnZSI6ImZyYSIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-turbo-transient="true"><meta name="visitor-hmac" content="644312b6a4ea66fcaef24d0dbe8f2adee2086637394b8c9f10b6d809209f1bfc" data-turbo-transient="true">
+
+
+    <meta name="hovercard-subject-tag" content="repository:1138230376" data-turbo-transient="">
+
+
+  <meta name="github-keyboard-shortcuts" content="repository,source-code,file-tree,copilot" data-turbo-transient="true">
+  
+
+  <meta name="selected-link" value="repo_source" data-turbo-transient="">
+  <link rel="assets" href="https://github.githubassets.com/">
+
+    <meta name="google-site-verification" content="Apib7-x98H0j5cPqHWwSMm6dNU4GmODRoqxLiDzdx9I">
+
+<meta name="octolytics-url" content="https://collector.github.com/github/collect"><meta name="octolytics-actor-id" content="256051408"><meta name="octolytics-actor-login" content="mirastolegen"><meta name="octolytics-actor-hash" content="b0f843ab43c710359080af3fe5a79219f7682252dda5a9443e905cfed9476205">
+
+
+
+
+
+  <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-turbo-transient="true">
+
+  
+
+
+
+
+    <meta name="user-login" content="mirastolegen">
+
+  <link rel="sudo-modal" href="https://github.com/sessions/sudo_modal">
+
+    <meta name="viewport" content="width=device-width">
+
+    
+
+      <meta name="description" content="Contribute to Vasemos/best-codes development by creating an account on GitHub.">
+
+      <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <meta property="fb:app_id" content="1401488693436528">
+    <meta name="apple-itunes-app" content="app-id=1477376905, app-argument=https://github.com/Vasemos/best-codes/blob/main/Practice7/config.py">
+
+      <meta name="twitter:image" content="https://opengraph.githubassets.com/8c4b3ef456a4e53c26b9d7364b94292c41b15fbe91f4706c1a5a7fc60296d60b/Vasemos/best-codes"><meta name="twitter:site" content="@github"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="best-codes/Practice7/config.py at main · Vasemos/best-codes"><meta name="twitter:description" content="Contribute to Vasemos/best-codes development by creating an account on GitHub.">
+  <meta property="og:image" content="https://opengraph.githubassets.com/8c4b3ef456a4e53c26b9d7364b94292c41b15fbe91f4706c1a5a7fc60296d60b/Vasemos/best-codes"><meta property="og:image:alt" content="Contribute to Vasemos/best-codes development by creating an account on GitHub."><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="GitHub"><meta property="og:type" content="object"><meta property="og:title" content="best-codes/Practice7/config.py at main · Vasemos/best-codes"><meta property="og:url" content="https://github.com/Vasemos/best-codes/blob/main/Practice7/config.py"><meta property="og:description" content="Contribute to Vasemos/best-codes development by creating an account on GitHub.">
+  
+
+
+      <link rel="shared-web-socket" href="wss://alive.github.com/_sockets/u/256051408/ws?session=eyJ2IjoiVjMiLCJ1IjoyNTYwNTE0MDgsInMiOjE5NDE5NTI4MzAsImMiOjI0MzU2OTM0ODEsInQiOjE3NzU1NDk0NzB9--23a246cbbd739ace4d93f6b610f2cee89943341de0ca492b74389a7d15b4293f" data-refresh-url="/_alive" data-session-id="11d620bb825512817b247a2830a0294d384eadce70e4da141ae9c64ab2e94bfa">
+      <link rel="shared-web-socket-src" href="https://github.com/assets-cdn/worker/socket-worker-7c82e8f232ff0383.js">
+
+      <link rel="service-worker-src" href="https://github.com/assets-cdn/worker/service-worker-b7a2b32f78716453.js?current_user=mirastolegen&amp;errors_url=https%3A%2F%2Fapi.github.com%2F_private%2Fbrowser%2Ferrors&amp;release=787ef3b720e6e61a9ddada6a38b546cf77b659a2&amp;actor_id=256051408&amp;is_staff=false&amp;analytics_collector_url=https%3A%2F%2Fcollector.github.com%2Fgithub%2Fcollect">
+
+      <meta name="hostname" content="github.com">
+
+
+      <meta name="keyboard-shortcuts-preference" content="all">
+      <meta name="hovercards-preference" content="true">
+      <meta name="announcement-preference-hovercard" content="true">
+
+        <meta name="expected-hostname" content="github.com">
+
+
+  <meta http-equiv="x-pjax-version" content="88799b51daf73968fe6eccc597ce779eb1e233aebe20313c6ac2bbaf54dd8373" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-csp-version" content="568c098497d98702bac1642a2a853732a047a6ced28eabd3e15d50041a890235" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-css-version" content="20fcfbab4ff75c6eb07df12ea46a99278a956a46f28b2d7e4e7233e3a2a3251e" data-turbo-track="reload">
+  <meta http-equiv="x-pjax-js-version" content="c7ab99722b071c0ceb54ece5ee955d6762da21dc6f237df9e484ec900f559876" data-turbo-track="reload">
+
+  <meta name="turbo-cache-control" content="no-preview" data-turbo-transient="">
+
+      <meta name="turbo-cache-control" content="no-cache" data-turbo-transient="">
+
+    <meta data-hydrostats="publish">
+
+  <meta name="go-import" content="github.com/Vasemos/best-codes git https://github.com/Vasemos/best-codes.git">
+
+  <meta name="octolytics-dimension-user_id" content="256095911"><meta name="octolytics-dimension-user_login" content="Vasemos"><meta name="octolytics-dimension-repository_id" content="1138230376"><meta name="octolytics-dimension-repository_nwo" content="Vasemos/best-codes"><meta name="octolytics-dimension-repository_public" content="true"><meta name="octolytics-dimension-repository_is_fork" content="false"><meta name="octolytics-dimension-repository_network_root_id" content="1138230376"><meta name="octolytics-dimension-repository_network_root_nwo" content="Vasemos/best-codes">
+
+
+
+    
+
+    <meta name="turbo-body-classes" content="logged-in env-production page-responsive">
+  <meta name="disable-turbo" content="false">
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <meta name="release" content="787ef3b720e6e61a9ddada6a38b546cf77b659a2">
+  <meta name="ui-target" content="full">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/assets/pinned-octocat-093da3e6fa40.svg" color="#000000">
+  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon-dark.png">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon-dark.svg" data-base-href="https://github.githubassets.com/favicons/favicon">
+
+<meta name="theme-color" content="#1e2327">
+<meta name="color-scheme" content="light dark">
+
+
+  <link rel="manifest" href="https://github.com/manifest.json" crossorigin="use-credentials">
+
+  <link rel="stylesheet" type="text/css" href="./phonebook_files/81758.e05262da2a6db2fb.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./phonebook_files/38963.f70dfea92b138b01.module.css" crossorigin="anonymous"><style id="ms-consent-banner-main-styles">.w8hcgFksdo30C8w-bygqu{color:#000}.ydkKdaztSS0AeHWIeIHsQ a{color:#0067B8}.erL690_8JwUW-R4bJRcfl{background-color:#EBEBEB;border:none;color:#000}.erL690_8JwUW-R4bJRcfl:enabled:hover{color:#000;background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}.erL690_8JwUW-R4bJRcfl:enabled:focus{background-color:#DBDBDB;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}.erL690_8JwUW-R4bJRcfl:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2);border:none}._1zNQOqxpBFSokeCLGi_hGr{border:none;background-color:#0067B8;color:#fff}._1zNQOqxpBFSokeCLGi_hGr:enabled:hover{color:#fff;background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:none}._1zNQOqxpBFSokeCLGi_hGr:enabled:focus{background-color:#0067B8;box-shadow:0px 4px 10px rgba(0,0,0,0.25);border:2px solid #000}._1zNQOqxpBFSokeCLGi_hGr:disabled{opacity:1;color:rgba(0,0,0,0.2);background-color:rgba(0,120,215,0.2);border:none}._23tra1HsiiP6cT-Cka-ycB{position:relative;display:flex;z-index:9999;width:100%;background-color:#F2F2F2;justify-content:space-between;text-align:left}div[dir="rtl"]._23tra1HsiiP6cT-Cka-ycB{text-align:right}._1Upc2NjY8AlDn177YoVj0y{margin:0;padding-left:5%;padding-top:8px;padding-bottom:8px}div[dir="rtl"] ._1Upc2NjY8AlDn177YoVj0y{margin:0;padding:8px 5% 8px 0;float:none}._23tra1HsiiP6cT-Cka-ycB svg{fill:none;max-width:none;max-height:none}._1V_hlU-7jdtPiooHMu89BB{display:table-cell;padding:12px;width:24px;height:24px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:24px;line-height:0}.f6QKJD7fhSbnJLarTL-W-{display:table-cell;vertical-align:middle;padding:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:16px}.f6QKJD7fhSbnJLarTL-W- a{text-decoration:underline}._2j0fmugLb1FgYz6KPuB91w{display:inline-block;margin-left:5%;margin-right:5%;min-width:40%;min-width:calc((150px + 3 * 4px) * 2 + 150px);min-width:-webkit-fit-content;min-width:-moz-fit-content;min-width:fit-content;align-self:center;position:relative}._1XuCi2WhiqeWRUVp3pnFG3{margin:4px;padding:5px;min-width:150px;min-height:36px;vertical-align:top;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._1XuCi2WhiqeWRUVp3pnFG3:focus{box-sizing:border-box}._1XuCi2WhiqeWRUVp3pnFG3:disabled{cursor:not-allowed}._2bvsb3ubApyZ0UGoQA9O9T{display:block;position:fixed;z-index:10000;top:0;left:0;width:100%;height:100%;background-color:rgba(255,255,255,0.6);overflow:auto;text-align:left}div[dir="rtl"]._2bvsb3ubApyZ0UGoQA9O9T{text-align:right}div[dir="rtl"] ._2bvsb3ubApyZ0UGoQA9O9T{left:auto;right:0}.AFsJE948muYyzCMktdzuk{position:relative;top:8%;margin-bottom:40px;margin-left:auto;margin-right:auto;box-sizing:border-box;width:640px;background-color:#fff;border:1px solid #0067B8}._3kWyBRbW_dgnMiEyx06Fu4{float:right;z-index:1;margin:2px;padding:12px;border:none;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:13px;line-height:13px;display:flex;align-items:center;text-align:center;color:#666;background-color:#fff}div[dir="rtl"] ._3kWyBRbW_dgnMiEyx06Fu4{margin:2px;padding:12px;float:left}.uCYvKvHXrhjNgflv1VqdD{position:static;margin-top:36px;margin-left:36px;margin-right:36px}._17pX1m9O_W--iZbDt3Ta5r{margin-top:0;margin-bottom:12px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:20px;line-height:24px;text-transform:none}._1kBkHQ1V1wu3kl-YcLgUr6{height:446px;overflow:auto}._20_nXDf6uFs9Q6wxRXG-I-{margin-top:0;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._20_nXDf6uFs9Q6wxRXG-I- a{text-decoration:underline}dl._2a0NH_GDQEQe5Ynfo7suVH{margin-top:36px;margin-bottom:0;padding:0;list-style:none;text-transform:none}dt._3j_LCPv7fyXv3A8FIXVwZ4{margin-top:20px;float:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;list-style:none}.k-vxTGFbdq1aOZB2HHpjh{margin:0;padding:0;border:none}._2Bucyy75c_ogoU1g-liB5R{margin:0;padding:0;border-bottom:none;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:600;font-size:18px;line-height:24px;text-transform:none}._63gwfzV8dclrsl2cfd90r{display:inline-block;margin-top:0;margin-bottom:13px;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px}._1l8wM_4mRYGz3Iu7l3BZR7{display:block}._2UE03QS02aZGkslegN_F-i{display:inline-block;position:relative;left:5px;margin-bottom:13px;margin-right:34px;padding:3px}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{margin:0 0 13px 34px;padding:3px;float:none}div[dir="rtl"] ._2UE03QS02aZGkslegN_F-i{left:auto;right:5px}._23tra1HsiiP6cT-Cka-ycB *::before,._2bvsb3ubApyZ0UGoQA9O9T *::before,._23tra1HsiiP6cT-Cka-ycB *::after,._2bvsb3ubApyZ0UGoQA9O9T *::after{box-sizing:inherit}._1HSFn0HzGo6w4ADApV8-c4{outline:2px solid rgba(0,0,0,0.8)}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2{display:inline-block;position:relative;margin-top:0;margin-left:0;margin-right:0;height:0;width:0;border-radius:0;cursor:pointer;outline:none;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{display:block;position:absolute;top:5px;left:3px;height:19px;width:19px;content:"";border-radius:50%;border:1px solid #000;background-color:#fff}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2+label::before{left:auto;right:3px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:rgba(0,0,0,0.8)}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:hover::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::before{border:1px solid #0067B8}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:not(:disabled)+label:focus::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{display:block;position:absolute;top:10px;left:8px;height:9px;width:9px;content:"";border-radius:50%;background-color:#000}div[dir="rtl"] input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked+label::after{left:auto;right:8px}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label{cursor:not-allowed}input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled+label::before{border:1px solid rgba(0,0,0,0.2);background-color:rgba(0,0,0,0.2)}._3RJzeL3l9Rl_lAQEm6VwdX{display:block;position:static;float:right;margin-top:0;margin-bottom:0;margin-left:19px;margin-right:0;padding-top:0;padding-bottom:0;padding-left:8px;padding-right:0;width:80%;width:calc(100% - 19px);font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-transform:none;cursor:pointer;box-sizing:border-box}div[dir="rtl"] ._3RJzeL3l9Rl_lAQEm6VwdX{margin:0 19px 0 0;padding:0 8px 0 0;float:left}.nohp3sIG12ZBhzcMnPala{margin-top:20px;margin-bottom:48px}._2uhaEsmeotZ3P-M0AXo2kF{padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._2uhaEsmeotZ3P-M0AXo2kF:focus{box-sizing:border-box}._2uhaEsmeotZ3P-M0AXo2kF:disabled{cursor:not-allowed}._3tOu1FJ59c_xz_PmI1lKV5{float:right;padding:0;width:278px;height:36px;cursor:pointer;font-family:Segoe UI, SegoeUI, Arial, sans-serif;font-style:normal;font-weight:normal;font-size:15px;line-height:20px;text-align:center}._3tOu1FJ59c_xz_PmI1lKV5:focus{box-sizing:border-box}._3tOu1FJ59c_xz_PmI1lKV5:disabled{cursor:not-allowed}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0;padding:0;float:left}@media only screen and (max-width: 768px){._2j0fmugLb1FgYz6KPuB91w,._1Upc2NjY8AlDn177YoVj0y{padding-top:8px;padding-bottom:12px;padding-left:3.75%;padding-right:3.75%;margin:0;width:92.5%}._23tra1HsiiP6cT-Cka-ycB{display:block}._1XuCi2WhiqeWRUVp3pnFG3{margin-bottom:8px;margin-left:0;margin-right:0;width:100%}._2bvsb3ubApyZ0UGoQA9O9T{overflow:hidden}.AFsJE948muYyzCMktdzuk{top:1.8%;width:93.33%;height:96.4%;overflow:hidden}.uCYvKvHXrhjNgflv1VqdD{margin-top:24px;margin-left:24px;margin-right:24px;height:100%}._1kBkHQ1V1wu3kl-YcLgUr6{height:62%;height:calc(100% - 188px);min-height:50%}._2uhaEsmeotZ3P-M0AXo2kF{width:100%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:12px;margin-left:0;width:100%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 12px 0;padding:0;float:none}}@media only screen and (max-width: 768px) and (orientation: landscape), only screen and (max-height: 260px), only screen and (max-width: 340px){.AFsJE948muYyzCMktdzuk{overflow:auto}}@media only screen and (max-height: 260px), only screen and (max-width: 340px){._1XuCi2WhiqeWRUVp3pnFG3{min-width:0}._3kWyBRbW_dgnMiEyx06Fu4{padding:3%}.uCYvKvHXrhjNgflv1VqdD{margin-top:3%;margin-left:3%;margin-right:3%}._17pX1m9O_W--iZbDt3Ta5r{margin-bottom:3%}._1kBkHQ1V1wu3kl-YcLgUr6{height:calc(79% - 64px)}.nohp3sIG12ZBhzcMnPala{margin-top:5%;margin-bottom:10%}._3tOu1FJ59c_xz_PmI1lKV5{margin-bottom:3%}div[dir="rtl"] ._3tOu1FJ59c_xz_PmI1lKV5{margin:0 0 3% 0;padding:0;float:none}}
+</style><style type="text/css" id="ms-consent-banner-theme-styles">._23tra1HsiiP6cT-Cka-ycB {
+            background-color: #24292f !important;
+        }.w8hcgFksdo30C8w-bygqu {
+            color: #ffffff !important;
+        }.ydkKdaztSS0AeHWIeIHsQ a {
+            color: #d8b9ff !important;
+        }._2bvsb3ubApyZ0UGoQA9O9T {
+            background-color: rgba(23, 23, 23, 0.8) !important;
+        }.AFsJE948muYyzCMktdzuk {
+            background-color: #24292f !important;
+            border: 1px solid #d8b9ff !important;
+        }._3kWyBRbW_dgnMiEyx06Fu4 {
+            color: #d8b9ff !important;
+            background-color: #24292f !important;
+        }._1zNQOqxpBFSokeCLGi_hGr {
+            border: 1px solid #ffffff !important;
+            background-color: #ffffff !important;
+            color: #1f2328 !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:enabled:hover {
+            color: #1f2328 !important;
+            background-color: #d8b9ff !important;
+            box-shadow: none !important;
+            border: 1px solid transparent !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:enabled:focus {
+            background-color: #d8b9ff !important;
+            box-shadow: none !important;
+            border: 2px solid #ffffff !important;
+        }._1zNQOqxpBFSokeCLGi_hGr:disabled {
+            opacity: 0.5 !important;
+            color: #1f2328 !important;
+            background-color: #ffffff !important;
+            border: 1px solid transparent !important;
+        }.erL690_8JwUW-R4bJRcfl {
+            border: 1px solid #eaeef2 !important;
+            background-color: #32383f !important;
+            color: #ffffff !important;
+        }.erL690_8JwUW-R4bJRcfl:enabled:hover {
+            color: #ffffff !important;
+            background-color: #24292f !important;
+            box-shadow: none !important;
+            border: 1px solid #ffffff !important;
+        }.erL690_8JwUW-R4bJRcfl:enabled:focus {
+            background-color: #24292f !important;
+            box-shadow: none !important;
+            border: 2px solid #6e7781 !important;
+        }.erL690_8JwUW-R4bJRcfl:disabled {
+            opacity: 0.5 !important;
+            color: #ffffff !important;
+            background-color: #424a53 !important;
+            border: 1px solid #6e7781 !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label::before {
+            border: 1px solid #d8b9ff !important;
+            background-color: #24292f !important;
+        }._1HSFn0HzGo6w4ADApV8-c4 {
+            outline: 2px solid #ffffff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:checked + label::after {
+            background-color: #d8b9ff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::before {
+            border: 1px solid #ffffff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:hover::after {
+            background-color: #ffffff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::before {
+            border: 1px solid #ffffff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2 + label:focus::after {
+            background-color: #d8b9ff !important;
+        }input[type="radio"]._1dp8Vp5m3HwAqGx8qBmFV2:disabled + label::before {
+            border: 1px solid rgba(227, 227, 227, 0.2) !important;
+            background-color: rgba(227, 227, 227, 0.2) !important;
+        }</style><link rel="stylesheet" type="text/css" href="./phonebook_files/10973.2f5cfee353d76041.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./phonebook_files/53839.52201ac8c146881f.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./phonebook_files/61975.bf2bb705802183ac.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./phonebook_files/26107.60b579873add8b9f.module.css" crossorigin="anonymous"><style data-styled="active" data-styled-version="5.3.11"></style><link rel="stylesheet" type="text/css" href="./phonebook_files/88185.4951727686b1f639.module.css" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="./phonebook_files/31917.bbcf768c67421496.module.css" crossorigin="anonymous"></head>
+
+  <body class="logged-in env-production page-responsive" style="word-wrap: break-word;" data-dialog-scroll-optimized="">
+    <div data-turbo-body="" class="logged-in env-production page-responsive" style="word-wrap: break-word;">
+      <div id="__primerPortalRoot__" role="region" style="z-index: 1000; position: absolute; width: 100%;" data-turbo-permanent=""></div>
+      
+
+    <div class="position-relative header-wrapper js-header-wrapper ">
+      <a href="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py#start-of-content" data-skip-target-assigned="false" class="tmp-p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus js-skip-to-content">Skip to content</a>
+
+      <span data-view-component="true" class="progress-pjax-loader Progress position-fixed width-full">
+    <span style="width: 0%;" data-view-component="true" class="Progress-item progress-pjax-loader-bar left-0 top-0 color-bg-accent-emphasis"></span>
+</span>      
+      
+      <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/primer-react-css.f296da2f85469022.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/keyboard-shortcuts-dialog.f581ff34f52b4167.module.css">
+
+<react-partial partial-name="keyboard-shortcuts-dialog" data-ssr="false" data-attempted-ssr="false" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{"docsUrl":"https://docs.github.com/get-started/accessibility/keyboard-shortcuts"}}</script>
+  <div data-target="react-partial.reactRoot"><div class="d-none"></div><script type="application/json" id="__PRIMER_DATA__r_1j___">{"resolvedServerColorMode":"night"}</script></div>
+</react-partial>
+
+
+
+
+
+      
+
+          
+
+                  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/primer-react-css.f296da2f85469022.module.css">
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="./phonebook_files/global-nav-bar.3e08e831e8139fff.module.css">
+
+<react-partial partial-name="global-nav-bar" data-ssr="true" data-attempted-ssr="true" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-partial.embeddedData">{"props":{"contextRegion":{"crumbs":[{"crumb_type":"user","label":"Vasemos","is_root":false,"href":"/Vasemos"},{"crumb_type":"repository","label":"best-codes","is_root":false,"href":"/Vasemos/best-codes"}],"localNavigation":[{"id":"code","icon":"code","label":"Code","href":"/Vasemos/best-codes","selectedLinks":["repo_source","repo_downloads","repo_commits","repo_releases","repo_tags","repo_branches","repo_packages","repo_deployments","repo_attestations"],"popoverTarget":false,"commandId":"repositories:go-to-code","reactNav":{"appTarget":"code-view","anchor":"code-view-repo-link"},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"issues","icon":"issue-opened","label":"Issues","href":"/Vasemos/best-codes/issues","selectedLinks":["repo_issues","repo_labels","repo_milestones"],"count":0,"popoverTarget":false,"commandId":"repositories:go-to-issues","reactNav":{"appTarget":"issues-react","anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"pull-requests","icon":"git-pull-request","label":"Pull requests","href":"/Vasemos/best-codes/pulls","selectedLinks":["repo_pulls","checks"],"count":0,"popoverTarget":false,"commandId":"repositories:go-to-pull-requests","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"actions","icon":"play","label":"Actions","href":"/Vasemos/best-codes/actions","selectedLinks":["repo_actions"],"popoverTarget":false,"commandId":"repositories:go-to-actions","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"projects","icon":"table","label":"Projects","href":"/Vasemos/best-codes/projects","selectedLinks":["repo_projects","new_repo_project","repo_project"],"popoverTarget":false,"commandId":"repositories:go-to-projects","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"security-and-quality","icon":"shield","label":"Security and quality","href":"/Vasemos/best-codes/security","selectedLinks":["security","overview","alerts","policy","token_scanning","code_scanning"],"count":0,"popoverTarget":false,"commandId":"repositories:go-to-security","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}},{"id":"insights","icon":"graph","label":"Insights","href":"/Vasemos/best-codes/pulse","selectedLinks":["repo_graphs","repo_contributors","dependency_graph","dependabot_updates","pulse","people","community"],"popoverTarget":false,"commandId":"repositories:go-to-insights","reactNav":{"appTarget":null,"anchor":null},"turboNav":{"frame":"repo-content-turbo-frame"}}],"localNavigationUpdateChannel":"eyJjIjoicmVwbzoxMTM4MjMwMzc2OnVzZXI6MjU2MDUxNDA4OnNldHRpbmdzIiwidCI6MTc3NTU0OTQ2OX0=--296c1d78ed8ee7e5c8fcb255c362475a97fcfe80f2d9dc3565f0442ab2784881","selectedLink":null,"currentPath":"/Vasemos/best-codes/blob/main/Practice7/config.py"},"userMenu":{"owner":{"login":"mirastolegen","name":null,"avatarUrl":"https://avatars.githubusercontent.com/u/256051408?v=4"}},"headerLogo":{"href":"/","aria-label":"Homepage "},"notifications":{"indicatorMode":"none","websocketChannel":"eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjU2MDUxNDA4IiwidCI6MTc3NTU0OTQ2OX0=--09b7e5610ddb219b6b029c4f5300c66e6a4be0c94cf223e15457ce712cdb4661","fetchIndicatorSrc":"/notifications/indicator","fetchIndicatorEnabled":true},"issues":{"href":"/issues"},"pulls":{"href":"/pulls"},"contributedRepos":{"show":true,"href":"/repos"},"copilot":{"show":true,"showAgentsButton":false,"copilotChatUrl":"/github-copilot/chat?skip_anchor=true","copilotApiUrl":"https://api.individual.githubcopilot.com"},"search":{"show":true,"showCommandPalette":false,"isSearchPage":false,"isJumpToSearch":false,"searchContext":{"scope":"repo:Vasemos/best-codes","current_repo_name":"best-codes","current_repo_nwo":"Vasemos/best-codes","user_id":"Vasemos"}},"enterpriseBanner":{"show":false},"globalTransactionalMessage":{"segments":[{"type":"text","content":"On April 24 we'll start using GitHub Copilot interaction data for AI model training unless you opt out. "},{"type":"link","content":"Review this update","href":"https://gh.io/AAzfaht"},{"type":"text","content":" and manage your preferences in your "},{"type":"link","content":"GitHub account settings","href":"https://github.com/settings/copilot/features"},{"type":"text","content":"."}],"dismissPath":"/settings/dismiss-notice/dashboard_jan_2026_privacy_copilot_nudge?nudge=true","analytics":{"category":"copilot_privacy_update_jan_2026","group":"","location":"global"}},"payloadsUrl":"/_global-navigation/payloads.json?current_repo_nwo=Vasemos%2Fbest-codes\u0026repository=best-codes\u0026return_to=https%3A%2F%2Fgithub.com%2FVasemos%2Fbest-codes%2Fblob%2Fmain%2FPractice7%2Fconfig.py\u0026user_id=Vasemos"}}</script>
+  <div data-target="react-partial.reactRoot"><link rel="preload" as="image" href="./phonebook_files/256051408"><header role="banner" aria-label="Global Navigation Menu" class="GlobalNav styles-module__appHeader__YzYWk prc-Stack-Stack-UQ9k6" data-gap="none" data-direction="vertical" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="none"><div class="prc-Stack-Stack-UQ9k6" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="center" data-padding="none"><div data-testid="top-nav-left" class="styles-module__left__Fylw7 styles-module__withLocalNavigation__rjTJ_ prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="normal"><div data-loading-wrapper="true"><button data-component="IconButton" type="button" aria-haspopup="dialog" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_apb_"><svg aria-hidden="true" focusable="false" class="octicon octicon-three-bars" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"></path></svg></button></div><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_apb_" popover="auto">Open menu</span><div class="d-none"></div><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderHome__nkA_U prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_cpb_" href="https://github.com/" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-mark-github" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" popover="auto"><span id="_R_cpb_">Homepage <span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->g then d<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">g</span><span aria-hidden="true">G</span></span><span class="prc-src-InternalVisuallyHidden-2YaI6">then</span> <span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">d</span><span aria-hidden="true">D</span></span></kbd></span></span><div class="d-none"></div></div><div data-testid="top-nav-center" class="styles-module__center__R3QRv styles-module__withLocalNavigation__rjTJ_ prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="stretch" data-wrap="nowrap" data-justify="start" data-padding="normal"><nav class="styles-module__contextRegion__VbSp2 prc-Breadcrumbs-BreadcrumbsBase-3Gb-B" aria-label="Breadcrumbs" data-overflow="menu" data-variant="normal"><ol class="prc-Breadcrumbs-BreadcrumbsList-BKjpe"><li class="prc-Breadcrumbs-ItemWrapper-k0NLn"><a class="styles-module__contextCrumb__IzGIq prc-Breadcrumbs-Item-jcraJ" href="https://github.com/Vasemos" data-discover="true"><span class="">Vasemos</span></a></li><li class="prc-Breadcrumbs-ItemWrapper-k0NLn"><a class="styles-module__contextCrumb__IzGIq prc-Breadcrumbs-Item-jcraJ" href="https://github.com/Vasemos/best-codes" data-discover="true"><span class="styles-module__contextCrumbLast__tI2e3">best-codes</span></a></li></ol></nav><div class="Search-module__searchButtonGroup__aetw5 prc-ButtonGroup-ButtonGroup-vFUrY"><div><button type="button" aria-label="Search or jump to…" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ Search-module__searchButton__aiE0a" data-loading="false" data-size="medium" data-variant="invisible"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></span><span data-component="text" class="prc-Button-Label-FWkx3"><span class="Search-module__placeholder__p9hbG Search-module__text__veSYi Search-module__value__TFoak">Type <kbd class="Search-module__kbd__WCskr">/</kbd> to search</span></span></span></button></div><div></div></div><button data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ Search-module__smallSearchButton___8Gvn prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_2l9b_"><svg aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" popover="auto"><span id="_R_2l9b_">Search or jump to…<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->forward slash<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">forward slash</span><span aria-hidden="true">/</span></span></kbd></span></span><div class="d-none"></div><div class="d-none"><qbsearch-input class="search-input" data-scope="repo:Vasemos/best-codes" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="4kK0xtCLm6aGKqDoNm_V8yjE2vFtd4TpyRC_yxun3Kny5r5f7jNlmrp9j7DEmUMttccc1MldoJ8aWlNvzH1Tdg" data-max-custom-scopes="10" data-header-redesign-enabled="true" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="Vasemos/best-codes" data-current-org="" data-current-owner="Vasemos" data-logged-in="true" data-copilot-chat-enabled="true" data-nl-search-enabled="false" data-catalyst="">
+  <div class="search-input-container search-with-dialog position-relative d-flex flex-row flex-items-center height-auto color-bg-transparent border-0 color-fg-subtle mx-0" data-action="click:qbsearch-input#searchInputContainerClicked">
+
+    <input type="hidden" name="type" class="js-site-search-type-field">
+
+    
+<div class="Overlay--hidden " data-modal-dialog-overlay="">
+  <modal-dialog data-action="close:qbsearch-input#handleClose cancel:qbsearch-input#handleClose" data-target="qbsearch-input.searchSuggestionsDialog" role="dialog" id="search-suggestions-dialog" aria-modal="true" aria-labelledby="search-suggestions-dialog-header" data-view-component="true" class="Overlay Overlay--width-medium Overlay--height-auto">
+      <h1 id="search-suggestions-dialog-header" class="sr-only">Search code, repositories, users, issues, pull requests...</h1>
+    <div class="Overlay-body Overlay-body--paddingNone">
+      
+          <div data-view-component="true">        <div class="search-suggestions position-absolute width-full color-shadow-large border color-fg-default color-bg-default overflow-hidden d-flex flex-column query-builder-container" style="border-radius: 12px;" data-target="qbsearch-input.queryBuilderContainer" hidden="">
+          <!-- '"` --><!-- </textarea></xmp> --><form id="query-builder-test-form" action="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py" accept-charset="UTF-8" method="get">
+  <query-builder data-target="qbsearch-input.queryBuilder" id="query-builder-query-builder-test" data-filter-key=":" data-view-component="true" class="QueryBuilder search-query-builder" data-min-width="300" data-catalyst="">
+    <div class="FormControl FormControl--fullWidth">
+      <label id="query-builder-test-label" for="query-builder-test" class="FormControl-label sr-only">
+        Search
+      </label>
+      <div class="QueryBuilder-StyledInput width-fit " data-target="query-builder.styledInput">
+          <span id="query-builder-test-leadingvisual-wrap" class="FormControl-input-leadingVisualWrap QueryBuilder-leadingVisualWrap">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search FormControl-input-leadingVisual">
+    <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+</svg>
+          </span>
+        <div data-target="query-builder.styledInputContainer" class="QueryBuilder-StyledInputContainer">
+          <div aria-hidden="true" class="QueryBuilder-StyledInputContent" data-target="query-builder.styledInputContent"></div>
+          <div class="QueryBuilder-InputWrapper">
+            <div aria-hidden="true" class="QueryBuilder-Sizer" data-target="query-builder.sizer"><span></span></div>
+            <input id="query-builder-test" name="query-builder-test" value="" autocomplete="off" type="text" role="combobox" spellcheck="false" aria-expanded="false" aria-describedby="validation-7a50179d-bd20-48d6-b88d-3c6127d1a1b6" data-target="query-builder.input" data-action="
+          input:query-builder#inputChange
+          blur:query-builder#inputBlur
+          keydown:query-builder#inputKeydown
+          focus:query-builder#inputFocus
+        " data-view-component="true" class="FormControl-input QueryBuilder-Input FormControl-medium" aria-controls="query-builder-test-results" aria-autocomplete="list" aria-haspopup="listbox" style="width: 300px;">
+          </div>
+        </div>
+          <span data-target="query-builder.clearButton" hidden="">
+            <span class="sr-only" id="query-builder-test-clear">Clear</span>
+            <button role="button" id="query-builder-test-clear-button" aria-labelledby="query-builder-test-clear query-builder-test-label" data-action="
+                  click:query-builder#clear
+                  focus:query-builder#clearButtonFocus
+                  blur:query-builder#clearButtonBlur
+                " variant="small" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium mr-1 tmp-mr-1 px-2 tmp-px-2 py-0 tmp-py-0 d-flex flex-items-center rounded-1 color-fg-muted">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x-circle-fill Button-visual">
+    <path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z"></path>
+</svg>
+</button>
+
+          </span>
+      </div>
+      <template id="search-icon"></template>
+
+<template id="code-icon"></template>
+
+<template id="file-code-icon"></template>
+
+<template id="history-icon"></template>
+
+<template id="repo-icon"></template>
+
+<template id="bookmark-icon"></template>
+
+<template id="plus-circle-icon"></template>
+
+<template id="circle-icon"></template>
+
+<template id="trash-icon"></template>
+
+<template id="team-icon"></template>
+
+<template id="project-icon"></template>
+
+<template id="pencil-icon"></template>
+
+<template id="copilot-icon"></template>
+
+<template id="copilot-error-icon"></template>
+
+<template id="workflow-icon"></template>
+
+<template id="book-icon"></template>
+
+<template id="code-review-icon"></template>
+
+<template id="codespaces-icon"></template>
+
+<template id="comment-icon"></template>
+
+<template id="comment-discussion-icon"></template>
+
+<template id="organization-icon"></template>
+
+<template id="rocket-icon"></template>
+
+<template id="shield-check-icon"></template>
+
+<template id="heart-icon"></template>
+
+<template id="server-icon"></template>
+
+<template id="globe-icon"></template>
+
+<template id="issue-opened-icon"></template>
+
+<template id="device-mobile-icon"></template>
+
+<template id="package-icon"></template>
+
+<template id="credit-card-icon"></template>
+
+<template id="play-icon"></template>
+
+<template id="gift-icon"></template>
+
+<template id="code-square-icon"></template>
+
+<template id="device-desktop-icon"></template>
+
+        <div class="position-relative">
+                        <ul role="listbox" class="ActionListWrap QueryBuilder-ListWrap" aria-label="Suggestions" data-action="
+                combobox-commit:query-builder#comboboxCommit
+                mousedown:query-builder#resultsMousedown
+              " data-target="query-builder.resultsList" data-persist-list="false" id="query-builder-test-results" tabindex="-1"></ul>
+
+        </div>
+      <div class="FormControl-inlineValidation" id="validation-7a50179d-bd20-48d6-b88d-3c6127d1a1b6" hidden="hidden">
+        <span class="FormControl-inlineValidation--visual">
+          <svg aria-hidden="true" height="12" viewBox="0 0 12 12" version="1.1" width="12" data-view-component="true" class="octicon octicon-alert-fill">
+    <path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+</svg>
+        </span>
+        <span></span>
+</div>    </div>
+    <div data-target="query-builder.screenReaderFeedback" aria-live="polite" aria-atomic="true" class="sr-only">0 suggestions.</div>
+</query-builder></form>
+          <div class="d-flex flex-row color-fg-muted tmp-px-3 text-small color-bg-default search-feedback-prompt">
+            <a target="_blank" href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax" data-view-component="true" class="Link color-fg-accent text-normal ml-2 tmp-ml-2">Search syntax tips</a>            <div class="d-flex flex-1"></div>
+              <button data-action="click:qbsearch-input#showFeedbackDialog" type="button" data-view-component="true" class="Button--link Button--medium Button color-fg-accent text-normal ml-2 tmp-ml-2">  <span class="Button-content">
+    <span class="Button-label">Give feedback</span>
+  </span>
+</button>
+          </div>
+        </div>
+</div>
+
+    </div>
+</modal-dialog></div>
+  </div>
+  <div data-action="click:qbsearch-input#retract" class="dark-backdrop position-fixed" hidden="" data-target="qbsearch-input.darkBackdrop"></div>
+  <div class="color-fg-default">
+    
+<dialog-helper>
+  <dialog data-target="qbsearch-input.feedbackDialog" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" id="feedback-dialog" aria-modal="true" aria-labelledby="feedback-dialog-title" aria-describedby="feedback-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade Overlay--disableScroll">
+    <div data-view-component="true" class="Overlay-header">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="feedback-dialog-title">
+        Provide feedback
+      </h1>
+        
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="feedback-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+  
+</div>
+      <scrollable-region data-labelled-by="feedback-dialog-title" data-catalyst="" style="overflow: auto;">
+        <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --><form id="code-search-feedback-form" data-turbo="false" action="https://github.com/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="bxaIC7Ojqg3oWLWXHWDSinRMR5vKHDjbdg35vXwEP3098FjDDVwxcKsoHFCDcSfJWehCldRQWQBNjinUlMyujA">
+          <p>We read every piece of feedback, and take your input very seriously.</p>
+          <textarea name="feedback" class="form-control width-full mb-2" style="height: 120px" id="feedback"></textarea>
+          <input name="include_email" id="include_email" aria-label="Include my email address so I can be contacted" class="form-control mr-2" type="checkbox">
+          <label for="include_email" style="font-weight: normal">Include my email address so I can be contacted</label>
+</form></div>
+      </scrollable-region>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd">          <button data-close-dialog-id="feedback-dialog" type="button" data-view-component="true" class="btn">    Cancel
+</button>
+          <button form="code-search-feedback-form" data-action="click:qbsearch-input#submitFeedback" type="submit" data-view-component="true" class="btn-primary btn">    Submit feedback
+</button>
+</div>
+</dialog></dialog-helper>
+
+    <custom-scopes data-target="qbsearch-input.customScopesManager" data-catalyst="">
+    
+<dialog-helper>
+  <dialog data-target="custom-scopes.customScopesModalDialog" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" id="custom-scopes-dialog" aria-modal="true" aria-labelledby="custom-scopes-dialog-title" aria-describedby="custom-scopes-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade Overlay--disableScroll">
+    <div data-view-component="true" class="Overlay-header Overlay-header--divided">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="custom-scopes-dialog-title">
+        Saved searches
+      </h1>
+        <h2 id="custom-scopes-dialog-description" class="Overlay-description">Use saved searches to filter your results more quickly</h2>
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="custom-scopes-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+  
+</div>
+      <scrollable-region data-labelled-by="custom-scopes-dialog-title" data-catalyst="" style="overflow: auto;">
+        <div data-view-component="true" class="Overlay-body">        <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
+
+        <div hidden="" class="create-custom-scope-form" data-target="custom-scopes.createCustomScopeForm">
+        <!-- '"` --><!-- </textarea></xmp> --><form id="custom-scopes-dialog-form" data-turbo="false" action="https://github.com/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="TW2mu5yvGDy39lTky8DVJH609Q9DAkduO1YPegfvXhM-L48PVFwE4lFZRPaNKyH4vtEJVAbBLTRGr4lrEIVwmA">
+          <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
+
+          <input type="hidden" id="custom_scope_id" name="custom_scope_id" data-target="custom-scopes.customScopesIdField">
+
+          <div class="form-group">
+            <label for="custom_scope_name">Name</label>
+            <auto-check src="/search/custom_scopes/check_name" required="">
+              <input type="text" name="custom_scope_name" id="custom_scope_name" data-target="custom-scopes.customScopesNameField" class="form-control" autocomplete="off" placeholder="github-ruby" required="" maxlength="50" spellcheck="false">
+              <input type="hidden" value="pYyb44H1TKOmYTbI872KF4jaBPi7JFPSH55NjFlUOoSMqxUkvTbu7WpyHUjGyy-564o7SX-uQKxuOK9xCPduyA" data-csrf="true">
+            </auto-check>
+          </div>
+
+          <div class="form-group">
+            <label for="custom_scope_query">Query</label>
+            <input type="text" name="custom_scope_query" id="custom_scope_query" data-target="custom-scopes.customScopesQueryField" class="form-control" autocomplete="off" placeholder="(repo:mona/a OR repo:mona/b) AND lang:python" required="" maxlength="500">
+          </div>
+
+          <p class="text-small color-fg-muted">
+            To see all available qualifiers, see our <a class="Link--inTextBlock" href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax">documentation</a>.
+          </p>
+</form>        </div>
+
+        <div data-target="custom-scopes.manageCustomScopesForm">
+          <div data-target="custom-scopes.list"></div>
+        </div>
+
+</div>
+      </scrollable-region>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd Overlay-footer--divided">          <button data-action="click:custom-scopes#customScopesCancel" type="button" data-view-component="true" class="btn">    Cancel
+</button>
+          <button form="custom-scopes-dialog-form" data-action="click:custom-scopes#customScopesSubmit" data-target="custom-scopes.customScopesSubmitButton" type="submit" data-view-component="true" class="btn-primary btn">    Create saved search
+</button>
+</div>
+</dialog></dialog-helper>
+    </custom-scopes>
+  </div>
+</qbsearch-input><input type="hidden" value="C4Iwspd7KLUpzMBCkrRdjr_r08v8va6QdcAxpyJsLymU0C5pOVaQmSwr6U6sQcJ7oIo7mdcGO1U0AZzqXWhHlw" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf"></div></div><div data-testid="top-nav-right" class="styles-module__right__mlBQg styles-module__withLocalNavigation__rjTJ_ prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="start" data-padding="normal"><div data-testid="top-bar-actions" class="hide-sm hide-md prc-Stack-Stack-UQ9k6" data-gap="condensed" data-direction="horizontal" data-align="center" data-wrap="nowrap" data-justify="start" data-padding="none"><span><div class="prc-ButtonGroup-ButtonGroup-vFUrY"><div><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_2kjpb_" href="https://github.com/copilot" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-copilot" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_2kjpb_" popover="auto">Chat with Copilot</span></div><div><div class="d-none"></div><button type="button" aria-label="Open Copilot…" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ CopilotItems-module__CopilotMenu__DVdfE" data-loading="false" data-size="medium" data-variant="invisible" id="_R_54jpb_"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-copilot" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path></svg></span></span><span data-component="trailingAction" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></button></div></div></span><div class="styles-module__itemDivider__nunbs"></div><button type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk GlobalCreateMenu-module__actionMenuButton__Hj_iB" data-loading="false" data-size="medium" data-variant="invisible" aria-labelledby="global-create-menu-tooltip-_R_1jpb_" id="_R_5jpb_"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-plus" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path></svg></span></span><span data-component="trailingAction" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="global-create-menu-tooltip-_R_1jpb_" popover="auto">Create new...</span><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_m3pb_" href="https://github.com/issues" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-issue-opened" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_m3pb_" popover="auto">Issues</span><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_q3pb_" href="https://github.com/pulls" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-git-pull-request" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_q3pb_" popover="auto">Pull requests</span><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_u3pb_" href="https://github.com/repos" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-repo" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_u3pb_" popover="auto">Repositories</span><div class="d-none"></div></div><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk styles-module__appHeaderButton__axedQ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_lpb_" href="https://github.com/notifications" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-inbox" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" popover="auto"><span id="_R_lpb_">You have no unread notifications<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->g then n<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">g</span><span aria-hidden="true">G</span></span><span class="prc-src-InternalVisuallyHidden-2YaI6">then</span> <span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">n</span><span aria-hidden="true">N</span></span></kbd></span></span><div class="d-none"></div><div class="GlobalNavUserMenu-module__container__NaVIt"><button data-component="IconButton" type="button" aria-haspopup="menu" data-login="mirastolegen" class="prc-Button-ButtonBase-9n-Xk GlobalNavUserMenu-module__anchor__Dcej6 prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_2npb_"><img data-component="Avatar" class="prc-Avatar-Avatar-0xaUi" alt="User avatar" width="32" height="32" style="--avatarSize-regular:32px" src="./phonebook_files/256051408" data-testid="github-avatar"></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_2npb_" popover="auto">Open user navigation menu</span></div></div></div><h2 class="prc-src-InternalVisuallyHidden-2YaI6">Repository navigation</h2><nav class="prc-components-UnderlineWrapper-eT-Yj LocalNavigation-module__LocalNavigation__b0Xc0" aria-label="Repository" data-variant="inset" data-overflow-measured="true"><ul class="prc-components-UnderlineItemList-xKlKC" role="list"><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes" aria-current="page" data-tab-item="code" data-react-nav="code-view" data-react-nav-anchor="code-view-repo-link" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-code" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg></span><span data-component="text" data-content="Code">Code</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/issues" data-tab-item="issues" data-react-nav="issues-react" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-issue-opened" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"></path></svg></span><span data-component="text" data-content="Issues">Issues</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/pulls" data-tab-item="pull-requests" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-git-pull-request" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path></svg></span><span data-component="text" data-content="Pull requests">Pull requests</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/actions" data-tab-item="actions" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-play" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"></path></svg></span><span data-component="text" data-content="Actions">Actions</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/projects" data-tab-item="projects" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-table" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"></path></svg></span><span data-component="text" data-content="Projects">Projects</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/security" data-tab-item="security-and-quality" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-shield" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M7.467.133a1.748 1.748 0 0 1 1.066 0l5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667Zm.61 1.429a.25.25 0 0 0-.153 0l-5.25 1.68a.25.25 0 0 0-.174.238V7c0 1.358.275 2.666 1.057 3.86.784 1.194 2.121 2.34 4.366 3.297a.196.196 0 0 0 .154 0c2.245-.956 3.582-2.104 4.366-3.298C13.225 9.666 13.5 8.36 13.5 7V3.48a.251.251 0 0 0-.174-.237l-5.25-1.68ZM8.75 4.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 1.5 0ZM9 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span><span data-component="text" data-content="Security and quality">Security and quality</span></a></li><li class="prc-UnderlineNav-UnderlineNavItem-syRjR"><a href="https://github.com/Vasemos/best-codes/pulse" data-tab-item="insights" data-turbo-frame="repo-content-turbo-frame" class="prc-components-UnderlineItem-7fP-n" data-discover="true"><span data-component="icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-graph" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></span><span data-component="text" data-content="Insights">Insights</span></a></li></ul></nav><div class="d-none"></div></header><div data-hpc="true" data-testid="transactional-message-banner" data-analytics-event="{&quot;category&quot;:&quot;copilot_privacy_update_jan_2026&quot;,&quot;action&quot;:&quot;dismiss&quot;,&quot;label&quot;:&quot;group:;location:global&quot;}" data-analytics-visible="{&quot;category&quot;:&quot;copilot_privacy_update_jan_2026&quot;,&quot;action&quot;:&quot;visible&quot;,&quot;label&quot;:&quot;group:;location:global&quot;}"><section aria-labelledby="_R_2b_" class="TransactionalMessageBanner-module__squareBanner__Pw6Pf prc-Banner-Banner-IPLJ2" data-dismissible="" data-title-hidden="" data-variant="info" data-actions-layout="default" tabindex="-1" data-layout="default"><div class="prc-Banner-BannerIcon-o4ayx"><svg aria-hidden="true" focusable="false" class="octicon octicon-info" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></div><div class="prc-Banner-BannerContainer-T-Siu"><div class="prc-Banner-BannerContent-LraS2"><span class="prc-VisuallyHidden-VisuallyHidden-Q0qSB"><h2 id="_R_2b_" class="prc-Banner-BannerTitle-T4z0L" data-banner-title="">Important update</h2></span><div class="BannerDescription"><span class="text-normal"><span>On April 24 we'll start using GitHub Copilot interaction data for AI model training unless you opt out. </span><a class="prc-Link-Link-9ZwDx" data-inline="true" href="https://gh.io/AAzfaht">Review this update</a><span> and manage your preferences in your </span><a class="prc-Link-Link-9ZwDx" data-inline="true" href="https://github.com/settings/copilot/features">GitHub account settings</a><span>.</span></span></div></div></div><button data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk prc-Banner-BannerDismiss-b12FL prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_ub_"><svg aria-hidden="true" focusable="false" class="octicon octicon-x" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_R_ub_" popover="auto">Dismiss banner</span></section></div><script type="application/json" id="__PRIMER_DATA__R_0___">{"resolvedServerColorMode":"night"}</script></div>
+</react-partial>
+
+
+      <div class="js-global-bar" style="display: none;">
+        
+
+
+<qbsearch-input class="search-input" data-scope="repo:Vasemos/best-codes" data-custom-scopes-path="/search/custom_scopes" data-delete-custom-scopes-csrf="4kK0xtCLm6aGKqDoNm_V8yjE2vFtd4TpyRC_yxun3Kny5r5f7jNlmrp9j7DEmUMttccc1MldoJ8aWlNvzH1Tdg" data-max-custom-scopes="10" data-header-redesign-enabled="true" data-initial-value="" data-blackbird-suggestions-path="/search/suggestions" data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations" data-current-repository="Vasemos/best-codes" data-current-org="" data-current-owner="Vasemos" data-logged-in="true" data-copilot-chat-enabled="true" data-nl-search-enabled="false" data-catalyst="">
+  <div class="search-input-container search-with-dialog position-relative d-flex flex-row flex-items-center height-auto color-bg-transparent border-0 color-fg-subtle mx-0" data-action="click:qbsearch-input#searchInputContainerClicked">
+
+    <input type="hidden" name="type" class="js-site-search-type-field">
+
+    
+<div class="Overlay--hidden " data-modal-dialog-overlay="">
+  <modal-dialog data-action="close:qbsearch-input#handleClose cancel:qbsearch-input#handleClose" data-target="qbsearch-input.searchSuggestionsDialog" role="dialog" id="search-suggestions-dialog" aria-modal="true" aria-labelledby="search-suggestions-dialog-header" data-view-component="true" class="Overlay Overlay--width-medium Overlay--height-auto">
+      <h1 id="search-suggestions-dialog-header" class="sr-only">Search code, repositories, users, issues, pull requests...</h1>
+    <div class="Overlay-body Overlay-body--paddingNone">
+      
+          <div data-view-component="true">        <div class="search-suggestions position-absolute width-full color-shadow-large border color-fg-default color-bg-default overflow-hidden d-flex flex-column query-builder-container" style="border-radius: 12px;" data-target="qbsearch-input.queryBuilderContainer" hidden="">
+          <!-- '"` --><!-- </textarea></xmp> --><form id="query-builder-test-form" action="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py" accept-charset="UTF-8" method="get">
+  <query-builder data-target="qbsearch-input.queryBuilder" id="query-builder-query-builder-test" data-filter-key=":" data-view-component="true" class="QueryBuilder search-query-builder" data-min-width="300" data-catalyst="">
+    <div class="FormControl FormControl--fullWidth">
+      <label id="query-builder-test-label" for="query-builder-test" class="FormControl-label sr-only">
+        Search
+      </label>
+      <div class="QueryBuilder-StyledInput width-fit " data-target="query-builder.styledInput">
+          <span id="query-builder-test-leadingvisual-wrap" class="FormControl-input-leadingVisualWrap QueryBuilder-leadingVisualWrap">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search FormControl-input-leadingVisual">
+    <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+</svg>
+          </span>
+        <div data-target="query-builder.styledInputContainer" class="QueryBuilder-StyledInputContainer">
+          <div aria-hidden="true" class="QueryBuilder-StyledInputContent" data-target="query-builder.styledInputContent"></div>
+          <div class="QueryBuilder-InputWrapper">
+            <div aria-hidden="true" class="QueryBuilder-Sizer" data-target="query-builder.sizer"><span></span></div>
+            <input id="query-builder-test" name="query-builder-test" value="" autocomplete="off" type="text" role="combobox" spellcheck="false" aria-expanded="false" aria-describedby="validation-7a50179d-bd20-48d6-b88d-3c6127d1a1b6" data-target="query-builder.input" data-action="
+          input:query-builder#inputChange
+          blur:query-builder#inputBlur
+          keydown:query-builder#inputKeydown
+          focus:query-builder#inputFocus
+        " data-view-component="true" class="FormControl-input QueryBuilder-Input FormControl-medium" aria-controls="query-builder-test-results" aria-autocomplete="list" aria-haspopup="listbox" style="width: 300px;">
+          </div>
+        </div>
+          <span data-target="query-builder.clearButton" hidden="">
+            <span class="sr-only" id="query-builder-test-clear">Clear</span>
+            <button role="button" id="query-builder-test-clear-button" aria-labelledby="query-builder-test-clear query-builder-test-label" data-action="
+                  click:query-builder#clear
+                  focus:query-builder#clearButtonFocus
+                  blur:query-builder#clearButtonBlur
+                " variant="small" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium mr-1 tmp-mr-1 px-2 tmp-px-2 py-0 tmp-py-0 d-flex flex-items-center rounded-1 color-fg-muted">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x-circle-fill Button-visual">
+    <path d="M2.343 13.657A8 8 0 1 1 13.658 2.343 8 8 0 0 1 2.343 13.657ZM6.03 4.97a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042L6.94 8 4.97 9.97a.749.749 0 0 0 .326 1.275.749.749 0 0 0 .734-.215L8 9.06l1.97 1.97a.749.749 0 0 0 1.275-.326.749.749 0 0 0-.215-.734L9.06 8l1.97-1.97a.749.749 0 0 0-.326-1.275.749.749 0 0 0-.734.215L8 6.94Z"></path>
+</svg>
+</button>
+
+          </span>
+      </div>
+      <template id="search-icon"></template>
+
+<template id="code-icon"></template>
+
+<template id="file-code-icon"></template>
+
+<template id="history-icon"></template>
+
+<template id="repo-icon"></template>
+
+<template id="bookmark-icon"></template>
+
+<template id="plus-circle-icon"></template>
+
+<template id="circle-icon"></template>
+
+<template id="trash-icon"></template>
+
+<template id="team-icon"></template>
+
+<template id="project-icon"></template>
+
+<template id="pencil-icon"></template>
+
+<template id="copilot-icon"></template>
+
+<template id="copilot-error-icon"></template>
+
+<template id="workflow-icon"></template>
+
+<template id="book-icon"></template>
+
+<template id="code-review-icon"></template>
+
+<template id="codespaces-icon"></template>
+
+<template id="comment-icon"></template>
+
+<template id="comment-discussion-icon"></template>
+
+<template id="organization-icon"></template>
+
+<template id="rocket-icon"></template>
+
+<template id="shield-check-icon"></template>
+
+<template id="heart-icon"></template>
+
+<template id="server-icon"></template>
+
+<template id="globe-icon"></template>
+
+<template id="issue-opened-icon"></template>
+
+<template id="device-mobile-icon"></template>
+
+<template id="package-icon"></template>
+
+<template id="credit-card-icon"></template>
+
+<template id="play-icon"></template>
+
+<template id="gift-icon"></template>
+
+<template id="code-square-icon"></template>
+
+<template id="device-desktop-icon"></template>
+
+        <div class="position-relative">
+                        <ul role="listbox" class="ActionListWrap QueryBuilder-ListWrap" aria-label="Suggestions" data-action="
+                combobox-commit:query-builder#comboboxCommit
+                mousedown:query-builder#resultsMousedown
+              " data-target="query-builder.resultsList" data-persist-list="false" id="query-builder-test-results" tabindex="-1"></ul>
+
+        </div>
+      <div class="FormControl-inlineValidation" id="validation-7a50179d-bd20-48d6-b88d-3c6127d1a1b6" hidden="hidden">
+        <span class="FormControl-inlineValidation--visual">
+          <svg aria-hidden="true" height="12" viewBox="0 0 12 12" version="1.1" width="12" data-view-component="true" class="octicon octicon-alert-fill">
+    <path d="M4.855.708c.5-.896 1.79-.896 2.29 0l4.675 8.351a1.312 1.312 0 0 1-1.146 1.954H1.33A1.313 1.313 0 0 1 .183 9.058ZM7 7V3H5v4Zm-1 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path>
+</svg>
+        </span>
+        <span></span>
+</div>    </div>
+    <div data-target="query-builder.screenReaderFeedback" aria-live="polite" aria-atomic="true" class="sr-only">0 suggestions.</div>
+</query-builder></form>
+          <div class="d-flex flex-row color-fg-muted tmp-px-3 text-small color-bg-default search-feedback-prompt">
+            <a target="_blank" href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax" data-view-component="true" class="Link color-fg-accent text-normal ml-2 tmp-ml-2">Search syntax tips</a>            <div class="d-flex flex-1"></div>
+              <button data-action="click:qbsearch-input#showFeedbackDialog" type="button" data-view-component="true" class="Button--link Button--medium Button color-fg-accent text-normal ml-2 tmp-ml-2">  <span class="Button-content">
+    <span class="Button-label">Give feedback</span>
+  </span>
+</button>
+          </div>
+        </div>
+</div>
+
+    </div>
+</modal-dialog></div>
+  </div>
+  <div data-action="click:qbsearch-input#retract" class="dark-backdrop position-fixed" hidden="" data-target="qbsearch-input.darkBackdrop"></div>
+  <div class="color-fg-default">
+    
+<dialog-helper>
+  <dialog data-target="qbsearch-input.feedbackDialog" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" id="feedback-dialog" aria-modal="true" aria-labelledby="feedback-dialog-title" aria-describedby="feedback-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade Overlay--disableScroll">
+    <div data-view-component="true" class="Overlay-header">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="feedback-dialog-title">
+        Provide feedback
+      </h1>
+        
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="feedback-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+  
+</div>
+      <scrollable-region data-labelled-by="feedback-dialog-title" data-catalyst="" style="overflow: auto;">
+        <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --><form id="code-search-feedback-form" data-turbo="false" action="https://github.com/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="bxaIC7Ojqg3oWLWXHWDSinRMR5vKHDjbdg35vXwEP3098FjDDVwxcKsoHFCDcSfJWehCldRQWQBNjinUlMyujA">
+          <p>We read every piece of feedback, and take your input very seriously.</p>
+          <textarea name="feedback" class="form-control width-full mb-2" style="height: 120px" id="feedback"></textarea>
+          <input name="include_email" id="include_email" aria-label="Include my email address so I can be contacted" class="form-control mr-2" type="checkbox">
+          <label for="include_email" style="font-weight: normal">Include my email address so I can be contacted</label>
+</form></div>
+      </scrollable-region>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd">          <button data-close-dialog-id="feedback-dialog" type="button" data-view-component="true" class="btn">    Cancel
+</button>
+          <button form="code-search-feedback-form" data-action="click:qbsearch-input#submitFeedback" type="submit" data-view-component="true" class="btn-primary btn">    Submit feedback
+</button>
+</div>
+</dialog></dialog-helper>
+
+    <custom-scopes data-target="qbsearch-input.customScopesManager" data-catalyst="">
+    
+<dialog-helper>
+  <dialog data-target="custom-scopes.customScopesModalDialog" data-action="close:qbsearch-input#handleDialogClose cancel:qbsearch-input#handleDialogClose" id="custom-scopes-dialog" aria-modal="true" aria-labelledby="custom-scopes-dialog-title" aria-describedby="custom-scopes-dialog-description" data-view-component="true" class="Overlay Overlay-whenNarrow Overlay--size-medium Overlay--motion-scaleFade Overlay--disableScroll">
+    <div data-view-component="true" class="Overlay-header Overlay-header--divided">
+  <div class="Overlay-headerContentWrap">
+    <div class="Overlay-titleWrap">
+      <h1 class="Overlay-title " id="custom-scopes-dialog-title">
+        Saved searches
+      </h1>
+        <h2 id="custom-scopes-dialog-description" class="Overlay-description">Use saved searches to filter your results more quickly</h2>
+    </div>
+    <div class="Overlay-actionWrap">
+      <button data-close-dialog-id="custom-scopes-dialog" aria-label="Close" type="button" data-view-component="true" class="close-button Overlay-closeButton"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg></button>
+    </div>
+  </div>
+  
+</div>
+      <scrollable-region data-labelled-by="custom-scopes-dialog-title" data-catalyst="" style="overflow: auto;">
+        <div data-view-component="true" class="Overlay-body">        <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
+
+        <div hidden="" class="create-custom-scope-form" data-target="custom-scopes.createCustomScopeForm">
+        <!-- '"` --><!-- </textarea></xmp> --><form id="custom-scopes-dialog-form" data-turbo="false" action="https://github.com/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="TW2mu5yvGDy39lTky8DVJH609Q9DAkduO1YPegfvXhM-L48PVFwE4lFZRPaNKyH4vtEJVAbBLTRGr4lrEIVwmA">
+          <div data-target="custom-scopes.customScopesModalDialogFlash"></div>
+
+          <input type="hidden" id="custom_scope_id" name="custom_scope_id" data-target="custom-scopes.customScopesIdField">
+
+          <div class="form-group">
+            <label for="custom_scope_name">Name</label>
+            <auto-check src="/search/custom_scopes/check_name" required="">
+              <input type="text" name="custom_scope_name" id="custom_scope_name" data-target="custom-scopes.customScopesNameField" class="form-control" autocomplete="off" placeholder="github-ruby" required="" maxlength="50" spellcheck="false">
+              <input type="hidden" value="pYyb44H1TKOmYTbI872KF4jaBPi7JFPSH55NjFlUOoSMqxUkvTbu7WpyHUjGyy-564o7SX-uQKxuOK9xCPduyA" data-csrf="true">
+            </auto-check>
+          </div>
+
+          <div class="form-group">
+            <label for="custom_scope_query">Query</label>
+            <input type="text" name="custom_scope_query" id="custom_scope_query" data-target="custom-scopes.customScopesQueryField" class="form-control" autocomplete="off" placeholder="(repo:mona/a OR repo:mona/b) AND lang:python" required="" maxlength="500">
+          </div>
+
+          <p class="text-small color-fg-muted">
+            To see all available qualifiers, see our <a class="Link--inTextBlock" href="https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax">documentation</a>.
+          </p>
+</form>        </div>
+
+        <div data-target="custom-scopes.manageCustomScopesForm">
+          <div data-target="custom-scopes.list"></div>
+        </div>
+
+</div>
+      </scrollable-region>
+      <div data-view-component="true" class="Overlay-footer Overlay-footer--alignEnd Overlay-footer--divided">          <button data-action="click:custom-scopes#customScopesCancel" type="button" data-view-component="true" class="btn">    Cancel
+</button>
+          <button form="custom-scopes-dialog-form" data-action="click:custom-scopes#customScopesSubmit" data-target="custom-scopes.customScopesSubmitButton" type="submit" data-view-component="true" class="btn-primary btn">    Create saved search
+</button>
+</div>
+</dialog></dialog-helper>
+    </custom-scopes>
+  </div>
+</qbsearch-input>  <input type="hidden" value="C4Iwspd7KLUpzMBCkrRdjr_r08v8va6QdcAxpyJsLymU0C5pOVaQmSwr6U6sQcJ7oIo7mdcGO1U0AZzqXWhHlw" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf">
+
+
+      </div>
+
+
+      <div hidden="hidden" data-view-component="true" class="js-stale-session-flash stale-session-flash flash flash-warn flash-full">
+  
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+        <span class="js-stale-session-flash-signed-in" hidden="">You signed in with another tab or window. <a class="Link--inTextBlock" href="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-signed-out" hidden="">You signed out in another tab or window. <a class="Link--inTextBlock" href="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py">Reload</a> to refresh your session.</span>
+        <span class="js-stale-session-flash-switched" hidden="">You switched accounts on another tab or window. <a class="Link--inTextBlock" href="https://github.com/Vasemos/best-codes/blob/main/Practice7/phonebook.py">Reload</a> to refresh your session.</span>
+
+    <button id="icon-button-98386023-4662-47cd-8d16-7af0b26c5946" aria-labelledby="tooltip-962adfb3-31a0-407f-9954-8ccf5a172eaf" type="button" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium flash-close js-flash-close">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x Button-visual">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+</button><tool-tip id="tooltip-962adfb3-31a0-407f-9954-8ccf5a172eaf" for="icon-button-98386023-4662-47cd-8d16-7af0b26c5946" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute" aria-hidden="true" role="tooltip"><template shadowrootmode="open"><style>
+      :host {
+        --tooltip-top: var(--tool-tip-position-top, 0);
+        --tooltip-left: var(--tool-tip-position-left, 0);
+        padding: var(--overlay-paddingBlock-condensed) var(--overlay-padding-condensed) !important;
+        font: var(--text-body-shorthand-small);
+        color: var(--tooltip-fgColor, var(--fgColor-onEmphasis)) !important;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: break-word;
+        white-space: pre;
+        background: var(--tooltip-bgColor, var(--bgColor-emphasis)) !important;
+        border-radius: var(--borderRadius-medium);
+        border: 0 !important;
+        opacity: 0;
+        max-width: min(var(--overlay-width-small), 100vw);
+        word-wrap: break-word;
+        white-space: normal;
+        width: max-content !important;
+        inset: var(--tooltip-top) auto auto var(--tooltip-left) !important;
+        overflow: visible !important;
+        text-wrap: balance;
+      }
+
+      :host(:is(.tooltip-n, .tooltip-nw, .tooltip-ne)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) - var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(:is(.tooltip-s, .tooltip-sw, .tooltip-se)) {
+        --tooltip-top: calc(var(--tool-tip-position-top, 0) + var(--overlay-offset, 0.25rem));
+        --tooltip-left: var(--tool-tip-position-left);
+      }
+
+      :host(.tooltip-w) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) - var(--overlay-offset, 0.25rem));
+      }
+
+      :host(.tooltip-e) {
+        --tooltip-top: var(--tool-tip-position-top);
+        --tooltip-left: calc(var(--tool-tip-position-left, 0) + var(--overlay-offset, 0.25rem));
+      }
+
+      :host:after{
+        position: absolute;
+        display: block;
+        right: 0;
+        left: 0;
+        height: var(--overlay-offset, 0.25rem);
+        content: "";
+      }
+
+      :host(.tooltip-s):after,
+      :host(.tooltip-se):after,
+      :host(.tooltip-sw):after {
+        bottom: 100%
+      }
+
+      :host(.tooltip-n):after,
+      :host(.tooltip-ne):after,
+      :host(.tooltip-nw):after {
+        top: 100%;
+      }
+
+      @keyframes tooltip-appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      :host(:popover-open),
+      :host(:popover-open):before {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      :host(.\:popover-open) {
+        animation-name: tooltip-appear;
+        animation-duration: .1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+      }
+
+      @media (forced-colors: active) {
+        :host {
+          outline: solid 1px transparent;
+        }
+
+        :host:before {
+          display: none;
+        }
+      }
+    </style><slot></slot></template>Dismiss alert</tool-tip>
+
+
+  
+</div>
+        
+          
+    </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+
+
+
+
+
+
+
+    <div id="js-flash-container" class="flash-container" data-turbo-replace="">
+
+
+
+
+  <template class="js-flash-template"></template>
+</div>
+
+
+    
+  <notification-shelf-watcher data-base-url="https://github.com/notifications/beta/shelf" data-channel="eyJjIjoibm90aWZpY2F0aW9uLWNoYW5nZWQ6MjU2MDUxNDA4IiwidCI6MTc3NTU0OTQ3MH0=--61be6a423876b511d0917a39aec38e779654ed1d69a4a2bbd7851d0e74ab4f41" data-view-component="true" class="js-socket-channel" data-refresh-delay="500" data-catalyst="" data-throttle-delay="5000"></notification-shelf-watcher>
+  <div hidden="" data-initial="" data-target="notification-shelf-watcher.placeholder"></div>
+
+
+
+
+
+
+  <div class="application-main " data-commit-hovercards-enabled="" data-discussion-hovercards-enabled="" data-issue-and-pr-hovercards-enabled="" data-project-hovercards-enabled="">
+        <div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <main id="js-repo-pjax-container">
+      
+      
+
+
+
+
+
+
+    
+  <div id="repository-container-header" data-turbo-replace="" hidden=""></div>
+
+
+
+<turbo-frame id="repo-content-turbo-frame" target="_top" data-turbo-action="advance" class="">
+    <div id="repo-content-pjax-container" class="repository-content ">
+      <a href="https://github.dev/" class="d-none js-github-dev-shortcut" data-hotkey=".,Mod+Alt+.">Open in github.dev</a>
+  <a href="https://github.dev/" class="d-none js-github-dev-new-tab-shortcut" data-hotkey="Shift+&gt;" target="_blank" rel="noopener noreferrer">Open in a new github.dev tab</a>
+    <a class="d-none" data-hotkey=",,Mod+Alt+," target="_blank" href="https://github.com/codespaces/new/Vasemos/best-codes/tree/main?resume=1">Open in codespace</a>
+
+
+
+
+    
+      
+    
+
+
+
+
+
+
+
+
+<react-app app-name="code-view" initial-path="/Vasemos/best-codes/blob/main/Practice7/config.py" style="display: block; min-height: calc(100vh - 64px);" data-attempted-ssr="true" data-ssr="true" data-lazy="false" data-alternate="false" data-data-router-enabled="true" data-react-profiling="false" data-catalyst="" class="loaded">
+  
+  <script type="application/json" data-target="react-app.embeddedData">{"payload":{"codeViewBlobRoute":{"csv":null,"csvError":null,"headerInfo":{"toc":null},"issueTemplate":null,"discussionTemplate":null,"richText":null,"renderedFileInfo":null,"symbols":{"timed_out":false,"not_analyzed":false,"symbols":[{"name":"load_config","kind":"function","ident_start":54,"ident_end":65,"extent_start":50,"extent_end":565,"fully_qualified_name":"load_config","ident_utf16":{"start":{"line_number":4,"utf16_col":4},"end":{"line_number":4,"utf16_col":15}},"extent_utf16":{"start":{"line_number":4,"utf16_col":0},"end":{"line_number":20,"utf16_col":17}}}]}},"codeViewLayoutRoute":{"repo":{"id":1138230376,"defaultBranch":"main","name":"best-codes","ownerLogin":"Vasemos","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2026-01-20T12:06:10.000Z","ownerAvatar":"https://avatars.githubusercontent.com/u/256095911?v=4","public":true,"private":false,"isOrgOwned":false},"currentUser":{"id":256051408,"login":"mirastolegen","userEmail":"mirastolegen52@gmail.com"},"uploadToken":"rrvOIzeNLITWoJUkgBO6tng9Hgk_1IO_V2oBWDcXkEK5e41Pji7Sm19ZoIBAA6T8VS9w9JzU1tuxL_FRmOjIww","allShortcutsEnabled":true,"treeExpanded":true,"path":"Practice7/config.py","symbolsExpanded":true,"refInfo":{"name":"main","listCacheKey":"v0:1769346410.0","canEdit":false,"currentOid":"1f3f399d2ee1ed9900352858a6fecea35254d354"},"helpUrl":"https://docs.github.com","findFileWorkerPath":"/assets-cdn/worker/find-file-worker-4e5d7136862a2a48.js","findInFileWorkerPath":"/assets-cdn/worker/find-in-file-worker-4c35b25d88167fef.js","githubDevUrl":"https://github.dev/"},"codeViewFileTreeLayoutRoute":{"fileTree":{"Practice7":{"items":[{"name":"config.py","path":"Practice7/config.py","contentType":"file"},{"name":"contacts.csv","path":"Practice7/contacts.csv","contentType":"file"},{"name":"database.ini","path":"Practice7/database.ini","contentType":"file"},{"name":"phonebook.py","path":"Practice7/phonebook.py","contentType":"file"}],"totalCount":4},"":{"items":[{"name":"Practice 8","path":"Practice 8","contentType":"directory"},{"name":"Practice1","path":"Practice1","contentType":"directory"},{"name":"Practice2","path":"Practice2","contentType":"directory"},{"name":"Practice3","path":"Practice3","contentType":"directory"},{"name":"Practice5","path":"Practice5","contentType":"directory"},{"name":"Practice7","path":"Practice7","contentType":"directory"}],"totalCount":6}},"fileTreeProcessingTime":76.71778599999999,"foldersToFetch":[]},"codeViewBlobLayoutRoute":{"codeLineWrapEnabled":false,"refInfo":{"name":"main","listCacheKey":"v0:1769346410.0","canEdit":true,"refType":"branch","currentOid":"1f3f399d2ee1ed9900352858a6fecea35254d354","canEditOnDefaultBranch":true,"fileExistsOnDefault":true},"path":"Practice7/config.py","blob":{"copilotSWEAgentEnabled":false,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/Vasemos/best-codes/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":false},"displayName":"config.py","displayUrl":"https://github.com/Vasemos/best-codes/blob/main/Practice7/config.py?raw=true","headerInfo":{"blobSize":"639 Bytes","deleteTooltip":"Fork this repository and delete the file","editTooltip":"Fork this repository and edit the file","ghDesktopPath":"https://desktop.github.com","isGitLfs":false,"onBranch":true,"shortPath":"9cc853f","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2FVasemos%2Fbest-codes%2Fblob%2Fmain%2FPractice7%2Fconfig.py","isCSV":false,"isRichtext":false,"lineInfo":{"truncatedLoc":"26","truncatedSloc":"18"},"mode":"file"},"image":false,"isCodeownersFile":null,"isPlain":false,"isValidLegacyIssueTemplate":false,"isIssueTemplate":false,"isDiscussionTemplate":false,"language":"Python","languageID":303,"large":false,"planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/Vasemos/best-codes/blob/main/Practice7/config.py","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","releasePath":"/Vasemos/best-codes/releases/new?marketplace=true","showPublishActionBanner":false},"rawBlobUrl":"https://github.com/Vasemos/best-codes/raw/refs/heads/main/Practice7/config.py","renderImageOrRaw":false,"shortPath":null,"symbolsEnabled":true,"tabSize":4,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null},"copilotInfo":null,"copilotAccessAllowed":true,"copilotSpacesEnabled":true,"modelsAccessAllowed":false,"modelsRepoIntegrationEnabled":false,"isMarketplaceEnabled":true},"codeViewBlobLayoutRoute.StyledBlob":{"rawLines":["import os","from configparser import ConfigParser","","","def load_config(filename='database.ini', section='postgresql'):","    parser = ConfigParser()","","    base_dir = os.path.dirname(os.path.abspath(__file__))","    file_path = os.path.join(base_dir, filename)","","    parser.read(file_path, encoding='utf-8')","","    config = {}","    if parser.has_section(section):","        params = parser.items(section)","        for param in params:","            config[param[0]] = param[1]","    else:","        raise Exception(f'Section {section} not found in the {file_path} file')","","    return config","","","if __name__ == '__main__':","    config = load_config()","    print(config)"],"stylingDirectives":null,"colorizedLines":["\u003cspan class=pl-k\u003eimport\u003c/span\u003e \u003cspan class=pl-s1\u003eos\u003c/span\u003e","\u003cspan class=pl-k\u003efrom\u003c/span\u003e \u003cspan class=pl-s1\u003econfigparser\u003c/span\u003e \u003cspan class=pl-k\u003eimport\u003c/span\u003e \u003cspan class=pl-v\u003eConfigParser\u003c/span\u003e","","","\u003cspan class=pl-k\u003edef\u003c/span\u003e \u003cspan class=pl-en\u003eload_config\u003c/span\u003e(\u003cspan class=pl-s1\u003efilename\u003c/span\u003e\u003cspan class=pl-c1\u003e=\u003c/span\u003e\u003cspan class=pl-s\u003e\u0026#39;database.ini\u0026#39;\u003c/span\u003e, \u003cspan class=pl-s1\u003esection\u003c/span\u003e\u003cspan class=pl-c1\u003e=\u003c/span\u003e\u003cspan class=pl-s\u003e\u0026#39;postgresql\u0026#39;\u003c/span\u003e):","    \u003cspan class=pl-s1\u003eparser\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-en\u003eConfigParser\u003c/span\u003e()","","    \u003cspan class=pl-s1\u003ebase_dir\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-s1\u003eos\u003c/span\u003e.\u003cspan class=pl-c1\u003epath\u003c/span\u003e.\u003cspan class=pl-c1\u003edirname\u003c/span\u003e(\u003cspan class=pl-s1\u003eos\u003c/span\u003e.\u003cspan class=pl-c1\u003epath\u003c/span\u003e.\u003cspan class=pl-c1\u003eabspath\u003c/span\u003e(\u003cspan class=pl-s1\u003e__file__\u003c/span\u003e))","    \u003cspan class=pl-s1\u003efile_path\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-s1\u003eos\u003c/span\u003e.\u003cspan class=pl-c1\u003epath\u003c/span\u003e.\u003cspan class=pl-c1\u003ejoin\u003c/span\u003e(\u003cspan class=pl-s1\u003ebase_dir\u003c/span\u003e, \u003cspan class=pl-s1\u003efilename\u003c/span\u003e)","","    \u003cspan class=pl-s1\u003eparser\u003c/span\u003e.\u003cspan class=pl-c1\u003eread\u003c/span\u003e(\u003cspan class=pl-s1\u003efile_path\u003c/span\u003e, \u003cspan class=pl-s1\u003eencoding\u003c/span\u003e\u003cspan class=pl-c1\u003e=\u003c/span\u003e\u003cspan class=pl-s\u003e\u0026#39;utf-8\u0026#39;\u003c/span\u003e)","","    \u003cspan class=pl-s1\u003econfig\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e {}","    \u003cspan class=pl-k\u003eif\u003c/span\u003e \u003cspan class=pl-s1\u003eparser\u003c/span\u003e.\u003cspan class=pl-c1\u003ehas_section\u003c/span\u003e(\u003cspan class=pl-s1\u003esection\u003c/span\u003e):","        \u003cspan class=pl-s1\u003eparams\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-s1\u003eparser\u003c/span\u003e.\u003cspan class=pl-c1\u003eitems\u003c/span\u003e(\u003cspan class=pl-s1\u003esection\u003c/span\u003e)","        \u003cspan class=pl-k\u003efor\u003c/span\u003e \u003cspan class=pl-s1\u003eparam\u003c/span\u003e \u003cspan class=pl-c1\u003ein\u003c/span\u003e \u003cspan class=pl-s1\u003eparams\u003c/span\u003e:","            \u003cspan class=pl-s1\u003econfig\u003c/span\u003e[\u003cspan class=pl-s1\u003eparam\u003c/span\u003e[\u003cspan class=pl-c1\u003e0\u003c/span\u003e]] \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-s1\u003eparam\u003c/span\u003e[\u003cspan class=pl-c1\u003e1\u003c/span\u003e]","    \u003cspan class=pl-k\u003eelse\u003c/span\u003e:","        \u003cspan class=pl-k\u003eraise\u003c/span\u003e \u003cspan class=pl-en\u003eException\u003c/span\u003e(\u003cspan class=pl-s\u003ef\u0026#39;Section \u003cspan class=pl-s1\u003e\u003cspan class=pl-kos\u003e{\u003c/span\u003e\u003cspan class=pl-s1\u003esection\u003c/span\u003e\u003cspan class=pl-kos\u003e}\u003c/span\u003e\u003c/span\u003e not found in the \u003cspan class=pl-s1\u003e\u003cspan class=pl-kos\u003e{\u003c/span\u003e\u003cspan class=pl-s1\u003efile_path\u003c/span\u003e\u003cspan class=pl-kos\u003e}\u003c/span\u003e\u003c/span\u003e file\u0026#39;\u003c/span\u003e)","","    \u003cspan class=pl-k\u003ereturn\u003c/span\u003e \u003cspan class=pl-s1\u003econfig\u003c/span\u003e","","","\u003cspan class=pl-k\u003eif\u003c/span\u003e \u003cspan class=pl-s1\u003e__name__\u003c/span\u003e \u003cspan class=pl-c1\u003e==\u003c/span\u003e \u003cspan class=pl-s\u003e\u0026#39;__main__\u0026#39;\u003c/span\u003e:","    \u003cspan class=pl-s1\u003econfig\u003c/span\u003e \u003cspan class=pl-c1\u003e=\u003c/span\u003e \u003cspan class=pl-en\u003eload_config\u003c/span\u003e()","    \u003cspan class=pl-en\u003eprint\u003c/span\u003e(\u003cspan class=pl-s1\u003econfig\u003c/span\u003e)"]}},"title":"best-codes/Practice7/config.py at main · Vasemos/best-codes","appPayload":{},"meta":{"title":"best-codes/Practice7/config.py at main · Vasemos/best-codes"}}</script>
+  <div data-target="react-app.reactRoot"><meta name="github-code-view-meta-stats" id="github-code-view-meta-stats" data-hydrostats="publish"> <!-- --> <a hidden="" id="code-view-repo-link" href="https://github.com/Vasemos/best-codes" data-discover="true"></a> <button hidden="" data-testid="header-permalink-button" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="y,Shift+Y"></button><button hidden="" data-hotkey="y,Shift+Y"></button><div><div style="--spacing:var(--spacing-none)" class="prc-PageLayout-PageLayoutRoot--KH-d"><div class="prc-PageLayout-PageLayoutWrapper-2BhU2" data-width="full"><div class="prc-PageLayout-PageLayoutContent-BneH9"><div class="CodeViewFileTreeLayout-module__sidebar__n_Aau" tabindex="0"><div class="prc-PageLayout-PaneWrapper-pHPop ReposFileTreePane-module__Pane__rBZpI ReposFileTreePane-module__HidePane__VHAVt" style="--offset-header:0px;--spacing-row:var(--spacing-none);--spacing-column:var(--spacing-none)" data-is-hidden="false" data-position="start" data-sticky="true"><div class="prc-PageLayout-HorizontalDivider-JLVqp prc-PageLayout-PaneHorizontalDivider-9tbnE" data-variant-regular="none" data-variant-narrow="none" data-position="start" style="--spacing-divider:var(--spacing-none);--spacing:var(--spacing-none)"></div><div class="prc-PageLayout-Pane-AyzHK" data-resizable="true" style="--spacing: var(--spacing-none); --pane-min-width: 256px; --pane-max-width: 577px; --pane-width-size: var(--pane-width-large); --pane-width: 320px;"><div><div id="repos-file-tree" class="ReposFileTreePane-module__PaneContents__SJjfF"><div class="ReposFileTreePane-module__Box_1__PpIop"><div class="d-flex width-full tmp-mb-3 flex-items-center"><h2 class="use-tree-pane-module__Heading__s4QbZ prc-Heading-Heading-MtWFE"><button data-component="IconButton" type="button" data-testid="collapse-file-tree-button" aria-expanded="true" aria-controls="repos-file-tree" class="prc-Button-ButtonBase-9n-Xk position-relative ExpandFileTreeButton-module__expandButton__hDOcv fgColor-muted prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="invisible" aria-labelledby="_R_99lmjal1d_" data-hotkey="Control+b"><svg aria-hidden="true" focusable="false" class="octicon octicon-sidebar-expand" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.177 7.823 2.396-2.396A.25.25 0 0 1 7 5.604v4.792a.25.25 0 0 1-.427.177L4.177 8.177a.25.25 0 0 1 0-.354Z"></path><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25H9.5v-13Zm12.5 13a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25H11v13Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="se" aria-hidden="true" id="_R_99lmjal1d_" popover="auto">Collapse file tree</span><button hidden="" data-testid="" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="Control+b"></button></h2><h2 class="CodeViewFileTreeLayout-module__heading__A1Iqk">Files</h2></div><div class="ReposFileTreePane-module__Box_2__g74WI"><div class="ReposFileTreePane-module__Box_3__D6cTp"><button type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" style="min-width:0" aria-label="main branch" data-testid="anchor-button" data-icv-name="Switch branches/tags" class="prc-Button-ButtonBase-9n-Xk react-repos-tree-pane-ref-selector width-full ref-selector-class RefSelectorAnchoredOverlay-module__RefSelectorOverlayBtn__a3WK3" data-loading="false" data-size="medium" data-variant="default" id="ref-picker-repos-header-ref-selector" data-hotkey="w"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="text" class="prc-Button-Label-FWkx3"><div class="RefSelectorAnchoredOverlay-module__RefSelectorOverlayContainer__yaf4p"><div class="RefSelectorAnchoredOverlay-module__RefSelectorOverlayHeader__XtXRG"><svg aria-hidden="true" focusable="false" class="octicon octicon-git-branch" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path></svg></div><div class="ref-selector-button-text-container RefSelectorAnchoredOverlay-module__RefSelectorBtnTextContainer__Di3rk"><span class="RefSelectorAnchoredOverlay-module__RefSelectorText__w_fmP">&nbsp;<!-- -->main</span></div></div></span><span data-component="trailingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></span></span></button><button hidden="" data-testid="ref-selector-hotkey-button" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="w"></button></div><div class="ReposFileTreePane-module__Box_4__DG4pa"><a data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk ReposFileTreePane-module__IconButton__rGggU prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" aria-labelledby="_r_18_" href="https://github.com/Vasemos/best-codes/new/main/Practice7" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-plus" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M7.75 2a.75.75 0 0 1 .75.75V7h4.25a.75.75 0 0 1 0 1.5H8.5v4.25a.75.75 0 0 1-1.5 0V8.5H2.75a.75.75 0 0 1 0-1.5H7V2.75A.75.75 0 0 1 7.75 2Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="n" aria-hidden="true" id="_r_18_" popover="auto">Add file</span><button data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk SearchButton-module__IconButton__SBlqu ReposFileTreePane-module__SearchButtonWithLeftBorder__TBrDc prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" aria-labelledby="_R_qhlmjal1d_"><svg aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" popover="auto"><span id="_R_qhlmjal1d_">Search this repository<span class="prc-src-InternalVisuallyHidden-2YaI6">(<!-- -->forward slash<!-- -->)</span></span><span class="prc-TooltipV2-KeybindingHintContainer-Ymj-3 prc-TooltipV2-HasTextBefore-fdOXj" aria-hidden="true"><kbd class="prc-KeybindingHint-KeybindingHint-qpYIs prc-Text-Text-9mHv3" data-testid="keybinding-hint"><span class="prc-components-Chord-DdhWN prc-components-ChordOnEmphasis-O-4BS prc-components-ChordSmall-c-P-x prc-Text-Text-9mHv3" data-kbd-chord="true"> <span class="prc-src-InternalVisuallyHidden-2YaI6">forward slash</span><span aria-hidden="true">/</span></span></kbd></span></span><button hidden="" data-testid="" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="/"></button></div></div></div><div class="ReposFileTreePane-module__FileResultsList__zmSnM"><span class="d-flex FileResultsList-module__FilesSearchBox__ivVkc TextInput-wrapper prc-components-TextInputWrapper-Hpdqi prc-components-TextInputBaseWrapper-wY-n0" data-leading-visual="true" data-trailing-visual="true" aria-busy="false"><span class="TextInput-icon" id="_R_1almjal1d_" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-search" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align:text-bottom"><path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path></svg></span><input type="text" aria-label="Go to file" role="combobox" aria-controls="file-results-list" aria-expanded="false" aria-haspopup="dialog" autocorrect="off" spellcheck="false" placeholder="Go to file" aria-describedby="_R_1almjal1d_ _R_1almjal1dH1_" data-component="input" class="prc-components-Input-IwWrt" value=""><span class="TextInput-icon" id="_R_1almjal1dH1_" aria-hidden="true"><kbd>t</kbd></span></span></div><button hidden="" data-testid="" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="t,Shift+T"></button><button hidden="" data-hotkey="t,Shift+T"></button><div class="ReposFileTreePane-module__Box_5__Zy_o6"><div style="height:1px;margin-top:-1px;width:100%;flex-shrink:0"></div><div><div class="react-tree-show-tree-items"><div class="ReposFileTreeView-module__Box__vkb5W" data-testid="repos-file-tree-container"><nav aria-label="File Tree Navigation"><span class="prc-src-InternalVisuallyHidden-2YaI6"><div></div></span><ul role="tree" aria-label="Files" data-truncate-text="true" class="prc-TreeView-TreeViewRootUlStyles-Mzrmj"><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice 8-item" role="treeitem" aria-labelledby="_r_0_" aria-describedby="_r_1_" aria-level="1" aria-expanded="false" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-right" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_0_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_1_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice 8</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice1-item" role="treeitem" aria-labelledby="_r_4_" aria-describedby="_r_5_" aria-level="1" aria-expanded="false" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-right" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_4_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_5_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice1</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice2-item" role="treeitem" aria-labelledby="_r_8_" aria-describedby="_r_9_" aria-level="1" aria-expanded="false" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-right" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_8_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_9_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice2</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice3-item" role="treeitem" aria-labelledby="_r_c_" aria-describedby="_r_d_" aria-level="1" aria-expanded="false" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-right" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_c_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_d_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice3</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice5-item" role="treeitem" aria-labelledby="_r_g_" aria-describedby="_r_h_" aria-level="1" aria-expanded="false" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-right" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M4.7 10c-.2 0-.4-.1-.5-.2-.3-.3-.3-.8 0-1.1L6.9 6 4.2 3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_g_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_h_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M1.75 1A1.75 1.75 0 0 0 0 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0 0 16 13.25v-8.5A1.75 1.75 0 0 0 14.25 3H7.5a.25.25 0 0 1-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice5</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice7-item" role="treeitem" aria-labelledby="_r_k_" aria-describedby="_r_l_" aria-level="1" aria-expanded="true" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 1; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"></div></div><div class="PRIVATE_TreeView-item-toggle PRIVATE_TreeView-item-toggle--hover PRIVATE_TreeView-item-toggle--end prc-TreeView-TreeViewItemToggle-hq3Xq prc-TreeView-TreeViewItemToggleHover-H9tbt prc-TreeView-TreeViewItemToggleEnd-nWt9I"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 12 12" width="12" height="12" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M6 8.825c-.2 0-.4-.1-.5-.2l-3.3-3.3c-.3-.3-.3-.8 0-1.1.3-.3.8-.3 1.1 0l2.7 2.7 2.7-2.7c.3-.3.8-.3 1.1 0 .3.3.3.8 0 1.1l-3.2 3.2c-.2.2-.4.3-.6.3Z"></path></svg></div><div id="_r_k_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_l_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><div class="PRIVATE_TreeView-directory-icon prc-TreeView-TreeViewDirectoryIcon-yP1oY"><svg aria-hidden="true" focusable="false" class="octicon octicon-file-directory-open-fill" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M.513 1.513A1.75 1.75 0 0 1 1.75 1h3.5c.55 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1H13a1 1 0 0 1 1 1v.5H2.75a.75.75 0 0 0 0 1.5h11.978a1 1 0 0 1 .994 1.117L15 13.25A1.75 1.75 0 0 1 13.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75c0-.464.184-.91.513-1.237Z"></path></svg></div></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>Practice7</span></span></div></div><ul role="group" aria-label="Practice7" style="list-style: none; padding: 0px; margin: 0px;"><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="0" id="Practice7/config.py-item" role="treeitem" aria-labelledby="_r_o_" aria-describedby="_r_p_" aria-level="2" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 2; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"><div class="PRIVATE_TreeView-item-level-line prc-TreeView-TreeViewItemLevelLine-F-0-2"></div></div></div><div id="_r_o_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_p_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-file" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>config.py</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice7/contacts.csv-item" role="treeitem" aria-labelledby="_r_s_" aria-describedby="_r_t_" aria-level="2" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 2; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"><div class="PRIVATE_TreeView-item-level-line prc-TreeView-TreeViewItemLevelLine-F-0-2"></div></div></div><div id="_r_s_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_t_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-file" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>contacts.csv</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice7/database.ini-item" role="treeitem" aria-labelledby="_r_10_" aria-describedby="_r_11_" aria-level="2" aria-selected="false"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 2; content-visibility: auto; contain-intrinsic-size: auto 2rem;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"><div class="PRIVATE_TreeView-item-level-line prc-TreeView-TreeViewItemLevelLine-F-0-2"></div></div></div><div id="_r_10_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_11_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-file" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>database.ini</span></span></div></div></li><li class="PRIVATE_TreeView-item prc-TreeView-TreeViewItem-Ter5f" tabindex="-1" id="Practice7/phonebook.py-item" role="treeitem" aria-labelledby="_r_14_" aria-describedby="_r_15_" aria-level="2" aria-selected="false" aria-current="true"><div class="PRIVATE_TreeView-item-container prc-TreeView-TreeViewItemContainer-z6qqQ" style="--level: 2;"><div style="grid-area: spacer; display: flex;"><div style="width: 100%; display: flex;"><div class="PRIVATE_TreeView-item-level-line prc-TreeView-TreeViewItemLevelLine-F-0-2"></div></div></div><div id="_r_14_" class="PRIVATE_TreeView-item-content prc-TreeView-TreeViewItemContent-RKsCI"><div class="PRIVATE_VisuallyHidden prc-TreeView-TreeViewVisuallyHidden-1N8xK" aria-hidden="true" id="_r_15_"></div><div class="PRIVATE_TreeView-item-visual prc-TreeView-TreeViewItemVisual-naWzj" aria-hidden="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-file" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M2 1.75C2 .784 2.784 0 3.75 0h6.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0 1 13.25 16h-9.5A1.75 1.75 0 0 1 2 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 9 4.25V1.5Zm6.75.062V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></div><span class="PRIVATE_TreeView-item-content-text prc-TreeView-TreeViewItemContentText-FFaKp"><span>phonebook.py</span></span></div></div></li></ul></li></ul></nav></div></div></div></div></div></div></div><div class="prc-PageLayout-VerticalDivider-9QRmK prc-PageLayout-PaneVerticalDivider-le57g" data-variant-narrow="none" data-variant-regular="line" data-variant-wide="line" data-position="start" style="--spacing:var(--spacing-none)"><div class="prc-PageLayout-DraggableHandle-9s6B4" role="slider" aria-label="Draggable pane splitter" aria-valuemin="256" aria-valuemax="577" aria-valuenow="320" aria-valuetext="Pane width 320 pixels" tabindex="0"></div></div></div></div><div class="prc-PageLayout-ContentWrapper-gR9eG" data-is-hidden-narrow="true"><div class="prc-PageLayout-Content-xWL-A" data-width="full" style="--spacing:var(--spacing-none)"><div class="SharedPageLayout-module__content__IwGAp" data-selector="repos-split-pane-content" tabindex="0"><!-- --><!-- -->  <div class="container CodeViewHeader-module__Box__JkPOb"><div class="CodeViewHeader-module__StickyHeader__Qn7UN" id="StickyHeader"><div class="CodeViewHeader-module__Box_1__SbNDV"><div class="CodeViewHeader-module__Box_2__TB46f"><div class="CodeViewHeader-module__Box_6__qKUtX"><div class="Breadcrumb-module__container__Vxvev Breadcrumb-module__lg__Rjz0A"><nav data-testid="breadcrumbs" aria-labelledby="repos-header-breadcrumb--wide-heading" id="repos-header-breadcrumb--wide" class="Breadcrumb-module__nav__rQFDj"><h2 class="sr-only ScreenReaderHeading-module__userSelectNone__rwWIk prc-Heading-Heading-MtWFE" data-testid="screen-reader-heading" id="repos-header-breadcrumb--wide-heading">Breadcrumbs</h2><ol class="Breadcrumb-module__list__ZH6zr"><li class="Breadcrumb-module__listItem__Ib0x_"><a class="Breadcrumb-module__repoLink__O2Nbs prc-Link-Link-9ZwDx" data-testid="breadcrumbs-repo-link" href="https://github.com/Vasemos/best-codes/tree/main" data-discover="true">best-codes</a></li><li class="Breadcrumb-module__listItem__Ib0x_"><span class="Breadcrumb-module__separator__eNwsI Breadcrumb-module__lg__Rjz0A" aria-hidden="true">/</span><a class="Breadcrumb-module__directoryLink__kQy_t prc-Link-Link-9ZwDx" href="https://github.com/Vasemos/best-codes/tree/main/Practice7" data-discover="true">Practice7</a></li></ol></nav><div data-testid="breadcrumbs-filename" class="Breadcrumb-module__filename__equZR"><span class="Breadcrumb-module__separator__eNwsI Breadcrumb-module__lg__Rjz0A" aria-hidden="true">/</span><h1 class="Breadcrumb-module__filenameHeading__MNMtw Breadcrumb-module__lg__Rjz0A prc-Heading-Heading-MtWFE" tabindex="-1" id="file-name-id-wide">phonebook.py</h1></div><button data-component="IconButton" type="button" class="prc-Button-ButtonBase-9n-Xk ml-2 prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="invisible" aria-labelledby="_r_2c_"><svg aria-hidden="true" focusable="false" class="octicon octicon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg></button><span class="CopyToClipboardButton-module__tooltip__BhMvU prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-label="Copy path" aria-hidden="true" id="_r_2c_" popover="auto">Copy path</span></div></div><div class="react-code-view-header-element--wide"><div class="CodeViewHeader-module__Box_7___0R6c"><div class="d-flex gap-2"><button hidden="" data-testid="" data-hotkey="l,Shift+L" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="l,Shift+L"></button><button hidden="" data-testid="" data-hotkey="Mod+Alt+g" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="Mod+Alt+g"></button><button type="button" data-hotkey="b,Shift+B,Control+/ Control+b" class="prc-Button-ButtonBase-9n-Xk NavigationMenu-module__Button__LpKgm" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" style="display: none;"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="text" class="prc-Button-Label-FWkx3">Blame</span></span></button><button hidden="" data-testid="" data-hotkey="b,Shift+B,Control+/ Control+b" data-hotkey-scope="read-only-cursor-text-area"></button><button data-component="IconButton" type="button" data-testid="more-file-actions-button-nav-menu-wide" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk js-blob-dropdown-click NavigationMenu-module__IconButton__HpX3G prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" aria-labelledby="_r_2i_" id="_r_2g_"><svg aria-hidden="true" focusable="false" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_2i_" popover="auto">More file actions</span></div></div></div><div class="react-code-view-header-element--narrow"><div class="CodeViewHeader-module__Box_7___0R6c"><div class="d-flex gap-2"><button hidden="" data-testid="" data-hotkey="l,Shift+L" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="l,Shift+L"></button><button hidden="" data-testid="" data-hotkey="Mod+Alt+g" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="Mod+Alt+g"></button><button type="button" data-hotkey="b,Shift+B,Control+/ Control+b" class="prc-Button-ButtonBase-9n-Xk NavigationMenu-module__Button__LpKgm" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" style="display: none;"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="text" class="prc-Button-Label-FWkx3">Blame</span></span></button><button hidden="" data-testid="" data-hotkey="b,Shift+B,Control+/ Control+b" data-hotkey-scope="read-only-cursor-text-area"></button><button data-component="IconButton" type="button" data-testid="more-file-actions-button-nav-menu-narrow" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk js-blob-dropdown-click NavigationMenu-module__IconButton__HpX3G prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="medium" data-variant="default" aria-labelledby="_r_2n_" id="_r_2l_"><svg aria-hidden="true" focusable="false" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_2n_" popover="auto">More file actions</span></div></div></div></div></div></div></div><div class="CodeView-module__contentWrapper__cG2JH"><div class="react-code-view-bottom-padding"><div class="BlobTopBanners-module__Box__v_nvx"></div></div> <button hidden="" data-testid="" data-hotkey="r,Shift+R" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="r,Shift+R"></button><div class="d-flex flex-column border rounded-2 tmp-mb-3 pl-1"><div class="LatestCommit-module__Box__B25ZT"><h2 class="sr-only ScreenReaderHeading-module__userSelectNone__rwWIk prc-Heading-Heading-MtWFE" data-testid="screen-reader-heading">Latest commit</h2><div data-testid="latest-commit" class="LatestCommit-module__Box_1__YkEgg"><div class="CommitAttribution-module__CommitAttributionContainer__I_rfs"><div data-testid="author-avatar" class="Box-sc-62in7e-0 AuthorAvatar-module__AuthorAvatarContainer__n0MVc"><a class="Link__StyledLink-sc-1syctfj-0 prc-Link-Link-9ZwDx" href="https://github.com/Vasemos" data-testid="avatar-icon-link" data-hovercard-url="/users/Vasemos/hovercard" data-hovercard-type="user" octo-click="hovercard-link-click" octo-dimensions="link_type:self" aria-keyshortcuts="Alt+ArrowUp"><img data-component="Avatar" class="AuthorAvatar-module__authorAvatarImage__a3R8x prc-Avatar-Avatar-0xaUi" alt="Vasemos" width="20" height="20" data-testid="github-avatar" aria-label="Vasemos" src="./phonebook_files/256095911" style="--avatarSize-regular: 20px;"></a><a class="Link__StyledLink-sc-1syctfj-0 dtKDuy AuthorAvatar-module__authorHoverableLink__MHTT8 prc-Link-Link-9ZwDx" data-muted="true" href="https://github.com/Vasemos/best-codes/commits?author=Vasemos" aria-label="commits by Vasemos" data-hovercard-url="/users/Vasemos/hovercard" data-hovercard-type="user" octo-click="hovercard-link-click" octo-dimensions="link_type:self" aria-keyshortcuts="Alt+ArrowUp">Vasemos</a></div><span class=""></span></div><div class="d-none d-sm-flex LatestCommit-module__Box_2__pSPKJ"><div class="Truncate flex-items-center f5"><span class="Truncate-text prc-Text-Text-9mHv3" data-testid="latest-commit-html"><a data-hovercard-url="/Vasemos/best-codes/commit/95a6e96de4422c6593511a2ead3ccda04f2558f2/hovercard" data-pjax="true" class="Link--secondary" href="https://github.com/Vasemos/best-codes/commit/95a6e96de4422c6593511a2ead3ccda04f2558f2" aria-keyshortcuts="Alt+ArrowUp">Add PhoneBook project with PostgreSQL</a></span></div></div><span class="d-flex d-sm-none fgColor-muted f6"><relative-time tense="past" datetime="2026-03-30T17:37:51.000Z" title="Mar 30, 2026, 10:37 PM GMT+5"><template shadowrootmode="open">last week</template>Mar 30, 2026</relative-time></span></div><div class="d-flex flex-shrink-0 gap-2"><div data-testid="latest-commit-details" class="d-none d-sm-flex flex-items-center"><span class="d-flex flex-nowrap fgColor-muted f6"><a class="Link--secondary prc-Link-Link-9ZwDx" aria-label="Commit 95a6e96" data-hovercard-url="/Vasemos/best-codes/commit/95a6e96de4422c6593511a2ead3ccda04f2558f2/hovercard" data-hovercard-type="commit" octo-click="hovercard-link-click" octo-dimensions="link_type:self" aria-keyshortcuts="Alt+ArrowUp" href="https://github.com/Vasemos/best-codes/commit/95a6e96de4422c6593511a2ead3ccda04f2558f2" data-discover="true">95a6e96</a>&nbsp;·&nbsp;<relative-time tense="past" datetime="2026-03-30T17:37:51.000Z" title="Mar 30, 2026, 10:37 PM GMT+5"><template shadowrootmode="open">last week</template>Mar 30, 2026</relative-time></span></div><div class="d-flex gap-2"><h2 class="sr-only ScreenReaderHeading-module__userSelectNone__rwWIk prc-Heading-Heading-MtWFE" data-testid="screen-reader-heading">History</h2><a href="https://github.com/Vasemos/best-codes/commits/main/Practice7/phonebook.py" class="prc-Button-ButtonBase-9n-Xk d-none d-lg-flex LinkButton-module__linkButton__nFnov flex-items-center fgColor-default" data-loading="false" data-size="small" data-variant="invisible"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-history" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z"></path></svg></span><span data-component="text" class="prc-Button-Label-FWkx3"><span class="fgColor-default">History</span></span></span></a><div class="d-sm-none"><button data-component="IconButton" type="button" aria-pressed="false" aria-expanded="false" data-testid="latest-commit-details-toggle" class="prc-Button-ButtonBase-9n-Xk LatestCommit-module__IconButton__mkJr_ prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="invisible" aria-labelledby="_r_2q_"><svg aria-hidden="true" focusable="false" class="octicon octicon-ellipsis" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M0 5.75C0 4.784.784 4 1.75 4h12.5c.966 0 1.75.784 1.75 1.75v4.5A1.75 1.75 0 0 1 14.25 12H1.75A1.75 1.75 0 0 1 0 10.25ZM12 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM7 8a1 1 0 1 0 2 0 1 1 0 0 0-2 0ZM4 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" aria-hidden="true" id="_r_2q_" popover="auto">Open commit details</span></div><div class="d-flex d-lg-none"><a aria-label="View commit history for this file." href="https://github.com/Vasemos/best-codes/commits/main/Practice7/phonebook.py" class="prc-Button-ButtonBase-9n-Xk LinkButton-module__linkButton__nFnov flex-items-center fgColor-default" data-loading="false" data-size="small" data-variant="invisible" aria-describedby="_r_2s_"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-history" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="m.427 1.927 1.215 1.215a8.002 8.002 0 1 1-1.6 5.685.75.75 0 1 1 1.493-.154 6.5 6.5 0 1 0 1.18-4.458l1.358 1.358A.25.25 0 0 1 3.896 6H.25A.25.25 0 0 1 0 5.75V2.104a.25.25 0 0 1 .427-.177ZM7.75 4a.75.75 0 0 1 .75.75v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5A.75.75 0 0 1 7.75 4Z"></path></svg></span></span></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="s" role="tooltip" aria-hidden="true" id="_r_2s_" popover="auto">History</span></div></div></div></div></div><div class="d-flex flex-row"><div class="container BlobViewContent-module__blobContainer__DtH2d"><div class="react-code-size-details-banner BlobViewContent-module__codeSizeDetails__e5sUw"><div class="react-code-size-details-banner CodeSizeDetails-module__Box__VcD6l"><div class="text-mono CodeSizeDetails-module__Box_1__GVxQL"><div data-testid="blob-size" class="CodeSizeDetails-module__Truncate_1__lE93V prc-Truncate-Truncate-2G1eo" data-inline="true" title="5.19 KB" style="--truncate-max-width: 100%;"><span>230 lines (175 loc) · 5.19 KB</span></div></div></div></div><div class="react-blob-view-header-sticky BlobViewContent-module__stickyHeader__VwxB5" id="repos-sticky-header"><div class="BlobViewHeader-module__Box__yhm9u"><div class="react-blob-sticky-header"><div class="FileNameStickyHeader-module__outerWrapper__ZL4Xc FileNameStickyHeader-module__outerWrapperHidden__Zpynk"><div class="FileNameStickyHeader-module__Box_5__dmNXA"><div class="Breadcrumb-module__container__Vxvev Breadcrumb-module__md__Wb1Gs"><nav data-testid="breadcrumbs" aria-labelledby="sticky-breadcrumb-heading" id="sticky-breadcrumb" class="Breadcrumb-module__nav__rQFDj"><h2 class="sr-only ScreenReaderHeading-module__userSelectNone__rwWIk prc-Heading-Heading-MtWFE" data-testid="screen-reader-heading" id="sticky-breadcrumb-heading">Breadcrumbs</h2><ol class="Breadcrumb-module__list__ZH6zr"><li class="Breadcrumb-module__listItem__Ib0x_"><a class="Breadcrumb-module__repoLink__O2Nbs prc-Link-Link-9ZwDx" data-testid="breadcrumbs-repo-link" href="https://github.com/Vasemos/best-codes/tree/main" data-discover="true">best-codes</a></li><li class="Breadcrumb-module__listItem__Ib0x_"><span class="Breadcrumb-module__separator__eNwsI Breadcrumb-module__md__Wb1Gs" aria-hidden="true">/</span><a class="Breadcrumb-module__directoryLink__kQy_t prc-Link-Link-9ZwDx" href="https://github.com/Vasemos/best-codes/tree/main/Practice7" data-discover="true">Practice7</a></li></ol></nav><div data-testid="breadcrumbs-filename" class="Breadcrumb-module__filename__equZR"><span class="Breadcrumb-module__separator__eNwsI Breadcrumb-module__md__Wb1Gs" aria-hidden="true">/</span><h1 class="Breadcrumb-module__filenameHeading__MNMtw Breadcrumb-module__md__Wb1Gs prc-Heading-Heading-MtWFE" tabindex="-1" id="sticky-file-name-id">phonebook.py</h1></div></div><button type="button" class="prc-Button-ButtonBase-9n-Xk FileNameStickyHeader-module__Button__LSEU_ FileNameStickyHeader-module__GoToTopButton__nxAFn" data-loading="false" data-size="small" data-variant="invisible"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="leadingVisual" class="prc-Button-Visual-YNt2F prc-Button-VisualWrap-E4cnq"><svg aria-hidden="true" focusable="false" class="octicon octicon-arrow-up" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M3.47 7.78a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0l4.25 4.25a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018L9 4.81v7.44a.75.75 0 0 1-1.5 0V4.81L4.53 7.78a.75.75 0 0 1-1.06 0Z"></path></svg></span><span data-component="text" class="prc-Button-Label-FWkx3">Top</span></span></button></div></div></div><div class="BlobViewHeader-module__Box_1__VEmuQ"><h2 class="sr-only ScreenReaderHeading-module__userSelectNone__rwWIk prc-Heading-Heading-MtWFE" data-testid="screen-reader-heading">File metadata and controls</h2><div class="BlobViewHeader-module__Box_2__icUs2"><ul aria-label="File view" class="prc-SegmentedControl-SegmentedControl-lqIXp BlobTabButtons-module__SegmentedControl__jen2u" data-variant="default" data-size="small"><li class="prc-SegmentedControl-Item-tSCQh" data-selected=""><button aria-current="true" class="prc-SegmentedControl-Button-E48xz" type="button" data-hotkey="Control+/ Control+c" style="--separator-color: transparent;"><span class="prc-SegmentedControl-Content-1COlk segmentedControl-content"><div class="prc-SegmentedControl-Text-7S2y2 segmentedControl-text" data-text="Code">Code</div></span></button></li><li class="prc-SegmentedControl-Item-tSCQh"><button aria-current="false" class="prc-SegmentedControl-Button-E48xz" type="button" data-hotkey="b,Shift+B,Control+/ Control+b" style="--separator-color: var(--borderColor-default);"><span class="prc-SegmentedControl-Content-1COlk segmentedControl-content"><div class="prc-SegmentedControl-Text-7S2y2 segmentedControl-text" data-text="Blame">Blame</div></span></button></li></ul><button hidden="" data-testid="" data-hotkey="Control+/ Control+c" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="" data-hotkey="b,Shift+B,Control+/ Control+b" data-hotkey-scope="read-only-cursor-text-area"></button><div class="react-code-size-details-in-header CodeSizeDetails-module__Box__VcD6l"><div class="text-mono CodeSizeDetails-module__Box_1__GVxQL"><div data-testid="blob-size" class="CodeSizeDetails-module__Truncate_1__lE93V prc-Truncate-Truncate-2G1eo" data-inline="true" title="5.19 KB" style="--truncate-max-width: 100%;"><span>230 lines (175 loc) · 5.19 KB</span></div></div></div></div><div class="BlobViewHeader-module__Box_3__ng6v2"><button hidden="" data-testid="" data-hotkey="Control+Shift+&gt;" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="Control+Shift+&gt;"></button><button hidden="" data-testid="" data-hotkey="Control+Shift+&lt;" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-hotkey="Control+Shift+&lt;"></button><button data-component="IconButton" type="button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_32_" id="_r_31_"><svg aria-hidden="true" focusable="false" class="octicon octicon-space" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M0 13.25V2.75C0 1.784.784 1 1.75 1H5c.551 0 1.07.26 1.4.7l.9 1.2a.25.25 0 0 0 .2.1h6.75c.966 0 1.75.784 1.75 1.75v3.638a.75.75 0 0 1-1.5 0V4.75a.25.25 0 0 0-.25-.25H7.5a1.75 1.75 0 0 1-1.4-.7l-.9-1.2a.25.25 0 0 0-.2-.1H1.75a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h5.663l.076.004a.75.75 0 0 1 0 1.492L7.413 15H1.75A1.75 1.75 0 0 1 0 13.25Z"></path><path d="M12.265 9.16a.248.248 0 0 1 .467 0l.237.649a3.726 3.726 0 0 0 2.219 2.218l.649.238a.249.249 0 0 1 0 .467l-.649.237a3.728 3.728 0 0 0-2.219 2.219l-.237.649a.249.249 0 0 1-.467 0l-.238-.649a3.726 3.726 0 0 0-2.218-2.219l-.649-.237a.248.248 0 0 1 0-.467l.649-.238a3.725 3.725 0 0 0 2.218-2.218l.238-.649Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="n" aria-hidden="true" id="_r_32_" popover="auto">Add to space</span><button data-component="IconButton" type="button" data-testid="copilot-ask-menu" class="prc-Button-ButtonBase-9n-Xk prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_34_" id="blob-view-header-copilot-icon"><svg aria-hidden="true" focusable="false" class="octicon octicon-copilot" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="n" aria-hidden="true" id="_r_34_" popover="auto">Ask Copilot about this file</span><div class="react-blob-header-edit-and-raw-actions BlobViewHeader-module__Box_4__J4Y4W"><div class="prc-ButtonGroup-ButtonGroup-vFUrY"><div><a href="https://github.com/Vasemos/best-codes/raw/refs/heads/main/Practice7/phonebook.py" data-testid="raw-button" data-hotkey="Control+/ Control+r" class="prc-Button-ButtonBase-9n-Xk LinkButton-module__linkButton__nFnov BlobViewHeader-module__LinkButton__X9kx2" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default"><span data-component="buttonContent" data-align="center" class="prc-Button-ButtonContent-Iohp5"><span data-component="text" class="prc-Button-Label-FWkx3">Raw</span></span></a></div><div><button data-component="IconButton" type="button" data-testid="copy-raw-button" data-hotkey="Control+Shift+C" class="prc-Button-ButtonBase-9n-Xk prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_37_"><svg aria-hidden="true" focusable="false" class="octicon octicon-copy" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="n" aria-hidden="true" id="_r_37_" popover="auto">Copy raw file</span></div><div><button data-component="IconButton" type="button" data-testid="download-raw-button" data-hotkey="Control+Shift+S" class="prc-Button-ButtonBase-9n-Xk BlobViewHeader-module__downloadButton__ef459 prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_39_"><svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="n" aria-hidden="true" id="_r_39_" popover="auto">Download raw file</span></div></div><button hidden="" data-testid="raw-button-shortcut" data-hotkey="Control+/ Control+r" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="copy-raw-button-shortcut" data-hotkey="Control+Shift+C" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="download-raw-button-shortcut" data-hotkey="Control+Shift+S" data-hotkey-scope="read-only-cursor-text-area"></button><a class="js-github-dev-shortcut d-none prc-Link-Link-9ZwDx" data-hotkey="., Control+Shift+/" href="https://github.dev/"></a><button hidden="" data-testid="" data-hotkey="., Control+Shift+/" data-hotkey-scope="read-only-cursor-text-area"></button><a class="js-github-dev-new-tab-shortcut d-none prc-Link-Link-9ZwDx" data-hotkey="Shift+.,Shift+&gt;,&gt;" href="https://github.dev/" target="_blank"></a><button hidden="" data-testid="" data-hotkey="Shift+.,Shift+&gt;,&gt;" data-hotkey-scope="read-only-cursor-text-area"></button><div class="prc-ButtonGroup-ButtonGroup-vFUrY"><div><a data-component="IconButton" type="button" data-hotkey="e,Shift+E" data-testid="edit-button" class="prc-Button-ButtonBase-9n-Xk LinkButton-module__linkButton__nFnov prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_3b_" href="https://github.com/Vasemos/best-codes/edit/main/Practice7/phonebook.py" data-discover="true"><svg aria-hidden="true" focusable="false" class="octicon octicon-pencil" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path></svg></a><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_3b_" popover="auto">Fork this repository and edit the file</span></div><div><button data-component="IconButton" type="button" data-testid="more-edit-button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="default" aria-labelledby="_r_3f_" id="_r_3d_"><svg aria-hidden="true" focusable="false" class="octicon octicon-triangle-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_3f_" popover="auto">More edit options</span></div></div><button hidden="" data-testid="" data-hotkey="e,Shift+E" data-hotkey-scope="read-only-cursor-text-area"></button></div><button data-component="IconButton" type="button" aria-pressed="false" aria-expanded="false" aria-controls="symbols-pane" data-hotkey="Control+i" data-testid="symbols-button" class="prc-Button-ButtonBase-9n-Xk BlobViewHeader-module__IconButton_2__RyjZg prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="invisible" aria-labelledby="_r_3r_" id="symbols-button"><svg aria-hidden="true" focusable="false" class="octicon octicon-code-square" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25Zm1.75-.25a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V1.75a.25.25 0 0 0-.25-.25Zm7.47 3.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L10.69 8 9.22 6.53a.75.75 0 0 1 0-1.06ZM6.78 6.53 5.31 8l1.47 1.47a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_3r_" popover="auto">Open symbols panel</span><div class="react-blob-header-edit-and-raw-actions-combined"><button data-component="IconButton" type="button" title="More file actions" data-testid="more-file-actions-button" aria-haspopup="true" aria-expanded="false" tabindex="0" class="prc-Button-ButtonBase-9n-Xk js-blob-dropdown-click BlobViewHeader-module__IconButton__XrMQY prc-Button-IconButton-fyge7" data-loading="false" data-no-visuals="true" data-size="small" data-variant="invisible" aria-labelledby="_r_3j_" id="_r_3h_"><svg aria-hidden="true" focusable="false" class="octicon octicon-kebab-horizontal" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M8 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm13 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path></svg></button><span class="prc-TooltipV2-Tooltip-tLeuB" data-direction="nw" aria-hidden="true" id="_r_3j_" popover="auto">Edit and raw actions</span></div></div></div></div><div></div></div><div class="BlobViewContent-module__blobContentWrapper__JS0W6"><section aria-labelledby="file-name-id-wide file-name-id-mobile" class="BlobContent-module__blobContentSection__VOgZq" style="margin-top: 46px;"><div class="CodeBlob-module__codeBlobWrapper__RS6In" style="padding-top: 8px; padding-bottom: 8px;"><div id="highlighted-line-menu-positioner" class="position-relative"><div id="copilot-button-positioner" class="position-relative"><div class="CodeBlob-module__codeBlobInner__tfjuQ"><div class="CodeBlob-module__cursorContainer__tiLPm"><div style="height: 4600px;"><div aria-hidden="true" data-testid="navigation-cursor" class="code-navigation-cursor" style="top: 40px; left: 171px;"> </div><button hidden="" data-testid="NavigationCursorEnter" data-hotkey="Control+Enter" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="NavigationCursorSetHighlightedLine" data-hotkey="Shift+J" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="NavigationCursorSetHighlightAndExpandMenu" data-hotkey="Alt+Shift+C,Alt+Shift+Ç" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="NavigationCursorPageDown" data-hotkey="PageDown" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="NavigationCursorPageUp" data-hotkey="PageUp" data-hotkey-scope="read-only-cursor-text-area"></button><button hidden="" data-testid="" data-hotkey="/" data-hotkey-scope="read-only-cursor-text-area"></button></div></div><textarea id="read-only-cursor-text-area" data-testid="read-only-cursor-text-area" aria-label="file content" aria-readonly="true" inputmode="none" tabindex="0" aria-multiline="true" aria-haspopup="false" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false" spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off" data-ms-editor="false" class="react-blob-textarea react-blob-print-hide" style="resize: none; margin-top: -2px; padding-left: 92px; padding-right: 70px; width: 100%; background-color: unset; box-sizing: border-box; color: transparent; position: absolute; border: none; tab-size: 4; outline: none; overflow: auto hidden; height: 4620px; font-size: 12px; line-height: 20px; overflow-wrap: normal; overscroll-behavior-x: none; white-space: pre; z-index: 1;">import csv
+import psycopg2
+from config import load_config
+
+
+def create_table():
+    command = """
+    CREATE TABLE IF NOT EXISTS phonebook (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(100) NOT NULL,
+        phone VARCHAR(20) NOT NULL
+    )
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(command)
+        conn.commit()
+
+        cur.close()
+        conn.close()
+        print("Table created successfully")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def insert_contact(name, phone):
+    sql = """
+    INSERT INTO phonebook (name, phone)
+    VALUES (%s, %s)
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(sql, (name, phone))
+        conn.commit()
+
+        cur.close()
+        conn.close()
+        print("Contact inserted successfully")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def insert_from_csv(filename):
+    sql = """
+    INSERT INTO phonebook (name, phone)
+    VALUES (%s, %s)
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        with open(filename, "r", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            next(reader)
+
+            for row in reader:
+                cur.execute(sql, (row[0], row[1]))
+
+        conn.commit()
+
+        cur.close()
+        conn.close()
+        print("Contacts inserted from CSV successfully")
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def show_contacts():
+    sql = "SELECT * FROM phonebook"
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(sql)
+        rows = cur.fetchall()
+
+        if rows:
+            for row in rows:
+                print(row)
+        else:
+            print("Phonebook is empty")
+
+        cur.close()
+        conn.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def search_contact(pattern):
+    sql = """
+    SELECT * FROM phonebook
+    WHERE name ILIKE %s OR phone ILIKE %s
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(sql, (pattern + "%", pattern + "%"))
+        rows = cur.fetchall()
+
+        if rows:
+            for row in rows:
+                print(row)
+        else:
+            print("No contacts found")
+
+        cur.close()
+        conn.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def update_contact(contact_id, new_name, new_phone):
+    sql = """
+    UPDATE phonebook
+    SET name = %s, phone = %s
+    WHERE id = %s
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(sql, (new_name, new_phone, contact_id))
+        conn.commit()
+
+        if cur.rowcount &gt; 0:
+            print("Contact updated successfully")
+        else:
+            print("Contact not found")
+
+        cur.close()
+        conn.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def delete_contact(value):
+    sql = """
+    DELETE FROM phonebook
+    WHERE name = %s OR phone = %s
+    """
+    try:
+        params = load_config()
+        conn = psycopg2.connect(**params)
+        cur = conn.cursor()
+
+        cur.execute(sql, (value, value))
+        conn.commit()
+
+        if cur.rowcount &gt; 0:
+            print("Contact deleted successfully")
+        else:
+            print("Contact not found")
+
+        cur.close()
+        conn.close()
+
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+
+
+def menu():
+    while True:
+        print("\n--- PHONEBOOK MENU ---")
+        print("1. Create table")
+        print("2. Insert contact from console")
+        print("3. Insert contacts from CSV")
+        print("4. Show all contacts")
+        print("5. Search contacts")
+        print("6. Update contact")
+        print("7. Delete contact")
+        print("8. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            create_table()
+
+        elif choice == "2":
+            name = input("Enter name: ")
+            phone = input("Enter phone: ")
+            insert_contact(name, phone)
+
+        elif choice == "3":
+            filename = input("Enter CSV filename: ")
+            insert_from_csv(filename)
+
+        elif choice == "4":
+            show_contacts()
+
+        elif choice == "5":
+            pattern = input("Enter name or phone prefix: ")
+            search_contact(pattern)
+
+        elif choice == "6":
+            contact_id = int(input("Enter contact id: "))
+            new_name = input("Enter new name: ")
+            new_phone = input("Enter new phone: ")
+            update_contact(contact_id, new_name, new_phone)
+
+        elif choice == "7":
+            value = input("Enter name or phone to delete: ")
+            delete_contact(value)
+
+        elif choice == "8":
+            print("Goodbye")
+            break
+
+        else:
+            print("Invalid choice")
+
+
+if __name__ == "__main__":
+    menu()</textarea><button hidden="" data-testid="" data-hotkey="Alt+F1,Control+Alt+˙,Control+Alt+h" data-hotkey-scope="read-only-cursor-text-area"></button><div style="pointer-events: none;"><div class="CodeLines-module__scrollContainerHidden__g7TeZ" tabindex="0"><div class="react-code-file-contents CodeLines-module__codeFileContents__TXelD" role="presentation" aria-hidden="true" data-tab-size="4" data-paste-markdown-skip="true" data-hpc="true" style="tab-size: 4; max-width: unset; width: 1166px;"><div class="react-line-numbers-no-virtualization" style="pointer-events: auto; position: relative; z-index: 2;"><div class="react-no-virtualization-wrapper-lines"><div data-line-number="1" class="react-line-number react-code-text" style="padding-right: 16px;">1</div><div data-line-number="2" class="react-line-number react-code-text" style="padding-right: 16px;">2</div><div data-line-number="3" class="react-line-number react-code-text" style="padding-right: 16px;">3</div><div data-line-number="4" class="react-line-number react-code-text" style="padding-right: 16px;">4</div><div data-line-number="5" class="react-line-number react-code-text" style="padding-right: 16px;">5</div><div data-line-number="6" class="react-line-number react-code-text" style="padding-right: 16px;">6<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="7" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">7</div><div data-line-number="8" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">8</div><div data-line-number="9" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">9</div><div data-line-number="10" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">10</div><div data-line-number="11" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">11</div><div data-line-number="12" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">12</div><div data-line-number="13" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">13</div><div data-line-number="14" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">14</div><div data-line-number="15" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">15</div><div data-line-number="16" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">16</div><div data-line-number="17" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">17</div><div data-line-number="18" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">18</div><div data-line-number="19" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">19</div><div data-line-number="20" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">20</div><div data-line-number="21" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">21</div><div data-line-number="22" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">22</div><div data-line-number="23" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">23</div><div data-line-number="24" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">24</div><div data-line-number="25" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">25</div><div data-line-number="26" class="child-of-line-5  react-line-number react-code-text" style="padding-right: 16px;">26</div><div data-line-number="27" class="react-line-number react-code-text" style="padding-right: 16px;">27</div><div data-line-number="28" class="react-line-number react-code-text" style="padding-right: 16px;">28</div><div data-line-number="29" class="react-line-number react-code-text" style="padding-right: 16px;">29</div><div data-line-number="30" class="react-line-number react-code-text" style="padding-right: 16px;">30<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="31" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">31</div><div data-line-number="32" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">32</div><div data-line-number="33" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">33</div><div data-line-number="34" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">34</div><div data-line-number="35" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">35</div><div data-line-number="36" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">36</div><div data-line-number="37" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">37</div><div data-line-number="38" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">38</div><div data-line-number="39" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">39</div><div data-line-number="40" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">40</div><div data-line-number="41" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">41</div><div data-line-number="42" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">42</div><div data-line-number="43" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">43</div><div data-line-number="44" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">44</div><div data-line-number="45" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">45</div><div data-line-number="46" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">46</div><div data-line-number="47" class="child-of-line-29  react-line-number react-code-text" style="padding-right: 16px;">47</div><div data-line-number="48" class="react-line-number react-code-text" style="padding-right: 16px;">48</div><div data-line-number="49" class="react-line-number react-code-text" style="padding-right: 16px;">49</div><div data-line-number="50" class="react-line-number react-code-text" style="padding-right: 16px;">50</div><div data-line-number="51" class="react-line-number react-code-text" style="padding-right: 16px;">51<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="52" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">52</div><div data-line-number="53" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">53</div><div data-line-number="54" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">54</div><div data-line-number="55" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">55</div><div data-line-number="56" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">56</div><div data-line-number="57" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">57</div><div data-line-number="58" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">58</div><div data-line-number="59" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">59</div><div data-line-number="60" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">60</div></div><div class="react-no-virtualization-wrapper-lines"><div data-line-number="61" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">61</div><div data-line-number="62" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">62</div><div data-line-number="63" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">63</div><div data-line-number="64" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">64</div><div data-line-number="65" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">65</div><div data-line-number="66" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">66</div><div data-line-number="67" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">67</div><div data-line-number="68" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">68</div><div data-line-number="69" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">69</div><div data-line-number="70" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">70</div><div data-line-number="71" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">71</div><div data-line-number="72" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">72</div><div data-line-number="73" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">73</div><div data-line-number="74" class="child-of-line-50  react-line-number react-code-text" style="padding-right: 16px;">74</div><div data-line-number="75" class="react-line-number react-code-text" style="padding-right: 16px;">75</div><div data-line-number="76" class="react-line-number react-code-text" style="padding-right: 16px;">76</div><div data-line-number="77" class="react-line-number react-code-text" style="padding-right: 16px;">77</div><div data-line-number="78" class="react-line-number react-code-text" style="padding-right: 16px;">78<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="79" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">79</div><div data-line-number="80" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">80</div><div data-line-number="81" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">81</div><div data-line-number="82" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">82</div><div data-line-number="83" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">83</div><div data-line-number="84" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">84</div><div data-line-number="85" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">85</div><div data-line-number="86" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">86</div><div data-line-number="87" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">87</div><div data-line-number="88" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">88</div><div data-line-number="89" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">89</div><div data-line-number="90" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">90</div><div data-line-number="91" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">91</div><div data-line-number="92" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">92</div><div data-line-number="93" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">93</div><div data-line-number="94" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">94</div><div data-line-number="95" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">95</div><div data-line-number="96" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">96</div><div data-line-number="97" class="child-of-line-77  react-line-number react-code-text" style="padding-right: 16px;">97</div><div data-line-number="98" class="react-line-number react-code-text" style="padding-right: 16px;">98</div><div data-line-number="99" class="react-line-number react-code-text" style="padding-right: 16px;">99</div><div data-line-number="100" class="react-line-number react-code-text" style="padding-right: 16px;">100</div><div data-line-number="101" class="react-line-number react-code-text" style="padding-right: 16px;">101<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="102" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">102</div><div data-line-number="103" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">103</div><div data-line-number="104" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">104</div><div data-line-number="105" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">105</div><div data-line-number="106" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">106</div><div data-line-number="107" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">107</div><div data-line-number="108" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">108</div><div data-line-number="109" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">109</div><div data-line-number="110" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">110</div><div data-line-number="111" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">111</div><div data-line-number="112" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">112</div><div data-line-number="113" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">113</div><div data-line-number="114" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">114</div><div data-line-number="115" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">115</div><div data-line-number="116" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">116</div><div data-line-number="117" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">117</div><div data-line-number="118" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">118</div><div data-line-number="119" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">119</div><div data-line-number="120" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">120</div></div><div class="react-no-virtualization-wrapper-lines"><div data-line-number="121" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">121</div><div data-line-number="122" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">122</div><div data-line-number="123" class="child-of-line-100  react-line-number react-code-text" style="padding-right: 16px;">123</div><div data-line-number="124" class="react-line-number react-code-text" style="padding-right: 16px;">124</div><div data-line-number="125" class="react-line-number react-code-text" style="padding-right: 16px;">125</div><div data-line-number="126" class="react-line-number react-code-text" style="padding-right: 16px;">126</div><div data-line-number="127" class="react-line-number react-code-text" style="padding-right: 16px;">127<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="128" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">128</div><div data-line-number="129" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">129</div><div data-line-number="130" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">130</div><div data-line-number="131" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">131</div><div data-line-number="132" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">132</div><div data-line-number="133" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">133</div><div data-line-number="134" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">134</div><div data-line-number="135" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">135</div><div data-line-number="136" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">136</div><div data-line-number="137" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">137</div><div data-line-number="138" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">138</div><div data-line-number="139" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">139</div><div data-line-number="140" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">140</div><div data-line-number="141" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">141</div><div data-line-number="142" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">142</div><div data-line-number="143" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">143</div><div data-line-number="144" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">144</div><div data-line-number="145" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">145</div><div data-line-number="146" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">146</div><div data-line-number="147" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">147</div><div data-line-number="148" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">148</div><div data-line-number="149" class="child-of-line-126  react-line-number react-code-text" style="padding-right: 16px;">149</div><div data-line-number="150" class="react-line-number react-code-text" style="padding-right: 16px;">150</div><div data-line-number="151" class="react-line-number react-code-text" style="padding-right: 16px;">151</div><div data-line-number="152" class="react-line-number react-code-text" style="padding-right: 16px;">152</div><div data-line-number="153" class="react-line-number react-code-text" style="padding-right: 16px;">153<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="154" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">154</div><div data-line-number="155" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">155</div><div data-line-number="156" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">156</div><div data-line-number="157" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">157</div><div data-line-number="158" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">158</div><div data-line-number="159" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">159</div><div data-line-number="160" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">160</div><div data-line-number="161" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">161</div><div data-line-number="162" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">162</div><div data-line-number="163" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">163</div><div data-line-number="164" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">164</div><div data-line-number="165" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">165</div><div data-line-number="166" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">166</div><div data-line-number="167" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">167</div><div data-line-number="168" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">168</div><div data-line-number="169" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">169</div><div data-line-number="170" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">170</div><div data-line-number="171" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">171</div><div data-line-number="172" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">172</div><div data-line-number="173" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">173</div><div data-line-number="174" class="child-of-line-152  react-line-number react-code-text" style="padding-right: 16px;">174</div><div data-line-number="175" class="react-line-number react-code-text" style="padding-right: 16px;">175</div><div data-line-number="176" class="react-line-number react-code-text" style="padding-right: 16px;">176</div><div data-line-number="177" class="react-line-number react-code-text" style="padding-right: 16px;">177</div><div data-line-number="178" class="react-line-number react-code-text" style="padding-right: 16px;">178<span class="LineNumber-module__codeAlert__WexRo LineNumber-module__codeAlertRight__hdWmf"><div aria-label="Collapse code section" role="button" tabindex="0" class="LineNumber-module__codeFoldingChevron__sY2Yt"><svg aria-hidden="true" focusable="false" class="octicon octicon-chevron-down" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" display="inline-block" overflow="visible" style="vertical-align: text-bottom;"><path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path></svg></div></span></div><div data-line-number="179" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">179</div><div data-line-number="180" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">180</div></div><div class="react-no-virtualization-wrapper-lines"><div data-line-number="181" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">181</div><div data-line-number="182" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">182</div><div data-line-number="183" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">183</div><div data-line-number="184" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">184</div><div data-line-number="185" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">185</div><div data-line-number="186" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">186</div><div data-line-number="187" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">187</div><div data-line-number="188" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">188</div><div data-line-number="189" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">189</div><div data-line-number="190" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">190</div><div data-line-number="191" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">191</div><div data-line-number="192" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">192</div><div data-line-number="193" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">193</div><div data-line-number="194" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">194</div><div data-line-number="195" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">195</div><div data-line-number="196" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">196</div><div data-line-number="197" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">197</div><div data-line-number="198" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">198</div><div data-line-number="199" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">199</div><div data-line-number="200" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">200</div><div data-line-number="201" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">201</div><div data-line-number="202" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">202</div><div data-line-number="203" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">203</div><div data-line-number="204" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">204</div><div data-line-number="205" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">205</div><div data-line-number="206" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">206</div><div data-line-number="207" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">207</div><div data-line-number="208" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">208</div><div data-line-number="209" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">209</div><div data-line-number="210" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">210</div><div data-line-number="211" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">211</div><div data-line-number="212" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">212</div><div data-line-number="213" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">213</div><div data-line-number="214" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">214</div><div data-line-number="215" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">215</div><div data-line-number="216" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">216</div><div data-line-number="217" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">217</div><div data-line-number="218" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">218</div><div data-line-number="219" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">219</div><div data-line-number="220" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">220</div><div data-line-number="221" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">221</div><div data-line-number="222" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">222</div><div data-line-number="223" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">223</div><div data-line-number="224" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">224</div><div data-line-number="225" class="child-of-line-177  react-line-number react-code-text" style="padding-right: 16px;">225</div><div data-line-number="226" class="react-line-number react-code-text" style="padding-right: 16px;">226</div><div data-line-number="227" class="react-line-number react-code-text" style="padding-right: 16px;">227</div><div data-line-number="228" class="react-line-number react-code-text" style="padding-right: 16px;">228</div><div data-line-number="229" class="react-line-number react-code-text" style="padding-right: 16px;">229</div><div data-line-number="230" class="react-line-number react-code-text" style="padding-right: 16px;">230</div></div></div><div class="react-code-lines"><div inert=""><div class="react-no-virtualization-wrapper"><div id="LC1" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">import</span> <span class="pl-s1">csv</span></div>
+<div id="LC2" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">import</span> <span class="pl-s1">psycopg2</span></div>
+<div id="LC3" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">from</span> <span class="pl-s1">config</span> <span class="pl-k">import</span> <span class="pl-s1">load_config</span></div>
+<div id="LC4" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC5" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC6" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">create_table</span>():</div>
+<div id="LC7" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">    <span class="pl-s1">command</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC8" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">    CREATE TABLE IF NOT EXISTS phonebook (</span></div>
+<div id="LC9" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">        id SERIAL PRIMARY KEY,</span></div>
+<div id="LC10" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">        name VARCHAR(100) NOT NULL,</span></div>
+<div id="LC11" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">        phone VARCHAR(20) NOT NULL</span></div>
+<div id="LC12" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">    )</span></div>
+<div id="LC13" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 "><span class="pl-s">    """</span></div>
+<div id="LC14" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">    <span class="pl-k">try</span>:</div>
+<div id="LC15" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC16" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC17" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC18" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">
+</div>
+<div id="LC19" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">command</span>)</div>
+<div id="LC20" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">commit</span>()</div>
+<div id="LC21" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">
+</div>
+<div id="LC22" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC23" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC24" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">        <span class="pl-en">print</span>(<span class="pl-s">"Table created successfully"</span>)</div>
+<div id="LC25" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">
+</div>
+<div id="LC26" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-5 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC27" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC28" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC29" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC30" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">insert_contact</span>(<span class="pl-s1">name</span>, <span class="pl-s1">phone</span>):</div>
+<div id="LC31" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC32" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 "><span class="pl-s">    INSERT INTO phonebook (name, phone)</span></div>
+<div id="LC33" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 "><span class="pl-s">    VALUES (%s, %s)</span></div>
+<div id="LC34" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 "><span class="pl-s">    """</span></div>
+<div id="LC35" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">    <span class="pl-k">try</span>:</div>
+<div id="LC36" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC37" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC38" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC39" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">
+</div>
+<div id="LC40" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>, (<span class="pl-s1">name</span>, <span class="pl-s1">phone</span>))</div>
+<div id="LC41" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">commit</span>()</div>
+<div id="LC42" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">
+</div>
+<div id="LC43" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC44" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC45" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">        <span class="pl-en">print</span>(<span class="pl-s">"Contact inserted successfully"</span>)</div>
+<div id="LC46" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">
+</div>
+<div id="LC47" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-29 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC48" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC49" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC50" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC51" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">insert_from_csv</span>(<span class="pl-s1">filename</span>):</div>
+<div id="LC52" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC53" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 "><span class="pl-s">    INSERT INTO phonebook (name, phone)</span></div>
+<div id="LC54" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 "><span class="pl-s">    VALUES (%s, %s)</span></div>
+<div id="LC55" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 "><span class="pl-s">    """</span></div>
+<div id="LC56" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">    <span class="pl-k">try</span>:</div>
+<div id="LC57" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC58" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC59" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC60" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">
+</div></div>
+<div class="react-no-virtualization-wrapper"><div id="LC61" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-k">with</span> <span class="pl-en">open</span>(<span class="pl-s1">filename</span>, <span class="pl-s">"r"</span>, <span class="pl-s1">encoding</span><span class="pl-c1">=</span><span class="pl-s">"utf-8"</span>) <span class="pl-k">as</span> <span class="pl-s1">file</span>:</div>
+<div id="LC62" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">            <span class="pl-s1">reader</span> <span class="pl-c1">=</span> <span class="pl-s1">csv</span>.<span class="pl-c1">reader</span>(<span class="pl-s1">file</span>)</div>
+<div id="LC63" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">            <span class="pl-en">next</span>(<span class="pl-s1">reader</span>)</div>
+<div id="LC64" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">
+</div>
+<div id="LC65" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">            <span class="pl-k">for</span> <span class="pl-s1">row</span> <span class="pl-c1">in</span> <span class="pl-s1">reader</span>:</div>
+<div id="LC66" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">                <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>, (<span class="pl-s1">row</span>[<span class="pl-c1">0</span>], <span class="pl-s1">row</span>[<span class="pl-c1">1</span>]))</div>
+<div id="LC67" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">
+</div>
+<div id="LC68" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">commit</span>()</div>
+<div id="LC69" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">
+</div>
+<div id="LC70" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC71" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC72" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">        <span class="pl-en">print</span>(<span class="pl-s">"Contacts inserted from CSV successfully"</span>)</div>
+<div id="LC73" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">
+</div>
+<div id="LC74" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-50 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC75" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC76" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC77" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC78" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">show_contacts</span>():</div>
+<div id="LC79" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"SELECT * FROM phonebook"</span></div>
+<div id="LC80" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">    <span class="pl-k">try</span>:</div>
+<div id="LC81" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC82" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC83" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC84" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">
+</div>
+<div id="LC85" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>)</div>
+<div id="LC86" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">rows</span> <span class="pl-c1">=</span> <span class="pl-s1">cur</span>.<span class="pl-c1">fetchall</span>()</div>
+<div id="LC87" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">
+</div>
+<div id="LC88" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-k">if</span> <span class="pl-s1">rows</span>:</div>
+<div id="LC89" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">            <span class="pl-k">for</span> <span class="pl-s1">row</span> <span class="pl-c1">in</span> <span class="pl-s1">rows</span>:</div>
+<div id="LC90" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">                <span class="pl-en">print</span>(<span class="pl-s1">row</span>)</div>
+<div id="LC91" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-k">else</span>:</div>
+<div id="LC92" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">            <span class="pl-en">print</span>(<span class="pl-s">"Phonebook is empty"</span>)</div>
+<div id="LC93" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">
+</div>
+<div id="LC94" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC95" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC96" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">
+</div>
+<div id="LC97" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-77 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC98" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC99" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC100" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC101" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">search_contact</span>(<span class="pl-s1">pattern</span>):</div>
+<div id="LC102" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC103" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 "><span class="pl-s">    SELECT * FROM phonebook</span></div>
+<div id="LC104" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 "><span class="pl-s">    WHERE name ILIKE %s OR phone ILIKE %s</span></div>
+<div id="LC105" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 "><span class="pl-s">    """</span></div>
+<div id="LC106" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">    <span class="pl-k">try</span>:</div>
+<div id="LC107" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC108" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC109" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC110" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">
+</div>
+<div id="LC111" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>, (<span class="pl-s1">pattern</span> <span class="pl-c1">+</span> <span class="pl-s">"%"</span>, <span class="pl-s1">pattern</span> <span class="pl-c1">+</span> <span class="pl-s">"%"</span>))</div>
+<div id="LC112" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">rows</span> <span class="pl-c1">=</span> <span class="pl-s1">cur</span>.<span class="pl-c1">fetchall</span>()</div>
+<div id="LC113" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">
+</div>
+<div id="LC114" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-k">if</span> <span class="pl-s1">rows</span>:</div>
+<div id="LC115" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">            <span class="pl-k">for</span> <span class="pl-s1">row</span> <span class="pl-c1">in</span> <span class="pl-s1">rows</span>:</div>
+<div id="LC116" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">                <span class="pl-en">print</span>(<span class="pl-s1">row</span>)</div>
+<div id="LC117" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-k">else</span>:</div>
+<div id="LC118" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">            <span class="pl-en">print</span>(<span class="pl-s">"No contacts found"</span>)</div>
+<div id="LC119" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">
+</div>
+<div id="LC120" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div></div>
+<div class="react-no-virtualization-wrapper"><div id="LC121" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC122" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">
+</div>
+<div id="LC123" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-100 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC124" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC125" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC126" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC127" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">update_contact</span>(<span class="pl-s1">contact_id</span>, <span class="pl-s1">new_name</span>, <span class="pl-s1">new_phone</span>):</div>
+<div id="LC128" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC129" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 "><span class="pl-s">    UPDATE phonebook</span></div>
+<div id="LC130" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 "><span class="pl-s">    SET name = %s, phone = %s</span></div>
+<div id="LC131" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 "><span class="pl-s">    WHERE id = %s</span></div>
+<div id="LC132" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 "><span class="pl-s">    """</span></div>
+<div id="LC133" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">    <span class="pl-k">try</span>:</div>
+<div id="LC134" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC135" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC136" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC137" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">
+</div>
+<div id="LC138" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>, (<span class="pl-s1">new_name</span>, <span class="pl-s1">new_phone</span>, <span class="pl-s1">contact_id</span>))</div>
+<div id="LC139" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">commit</span>()</div>
+<div id="LC140" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">
+</div>
+<div id="LC141" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-k">if</span> <span class="pl-s1">cur</span>.<span class="pl-c1">rowcount</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0</span>:</div>
+<div id="LC142" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">            <span class="pl-en">print</span>(<span class="pl-s">"Contact updated successfully"</span>)</div>
+<div id="LC143" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-k">else</span>:</div>
+<div id="LC144" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">            <span class="pl-en">print</span>(<span class="pl-s">"Contact not found"</span>)</div>
+<div id="LC145" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">
+</div>
+<div id="LC146" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC147" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC148" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">
+</div>
+<div id="LC149" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-126 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC150" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC151" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC152" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC153" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">delete_contact</span>(<span class="pl-s1">value</span>):</div>
+<div id="LC154" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">    <span class="pl-s1">sql</span> <span class="pl-c1">=</span> <span class="pl-s">"""</span></div>
+<div id="LC155" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 "><span class="pl-s">    DELETE FROM phonebook</span></div>
+<div id="LC156" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 "><span class="pl-s">    WHERE name = %s OR phone = %s</span></div>
+<div id="LC157" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 "><span class="pl-s">    """</span></div>
+<div id="LC158" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">    <span class="pl-k">try</span>:</div>
+<div id="LC159" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">params</span> <span class="pl-c1">=</span> <span class="pl-en">load_config</span>()</div>
+<div id="LC160" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">conn</span> <span class="pl-c1">=</span> <span class="pl-s1">psycopg2</span>.<span class="pl-c1">connect</span>(<span class="pl-c1">**</span><span class="pl-s1">params</span>)</div>
+<div id="LC161" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">cur</span> <span class="pl-c1">=</span> <span class="pl-s1">conn</span>.<span class="pl-c1">cursor</span>()</div>
+<div id="LC162" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">
+</div>
+<div id="LC163" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">execute</span>(<span class="pl-s1">sql</span>, (<span class="pl-s1">value</span>, <span class="pl-s1">value</span>))</div>
+<div id="LC164" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">commit</span>()</div>
+<div id="LC165" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">
+</div>
+<div id="LC166" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-k">if</span> <span class="pl-s1">cur</span>.<span class="pl-c1">rowcount</span> <span class="pl-c1">&gt;</span> <span class="pl-c1">0</span>:</div>
+<div id="LC167" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">            <span class="pl-en">print</span>(<span class="pl-s">"Contact deleted successfully"</span>)</div>
+<div id="LC168" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-k">else</span>:</div>
+<div id="LC169" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">            <span class="pl-en">print</span>(<span class="pl-s">"Contact not found"</span>)</div>
+<div id="LC170" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">
+</div>
+<div id="LC171" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">cur</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC172" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">        <span class="pl-s1">conn</span>.<span class="pl-c1">close</span>()</div>
+<div id="LC173" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">
+</div>
+<div id="LC174" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-152 ">    <span class="pl-k">except</span> (<span class="pl-v">Exception</span>, <span class="pl-s1">psycopg2</span>.<span class="pl-c1">DatabaseError</span>) <span class="pl-k">as</span> <span class="pl-s1">error</span>:</div>
+<div id="LC175" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">        <span class="pl-en">print</span>(<span class="pl-s1">error</span>)</div>
+<div id="LC176" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC177" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC178" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">def</span> <span class="pl-en">menu</span>():</div>
+<div id="LC179" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">    <span class="pl-k">while</span> <span class="pl-c1">True</span>:</div>
+<div id="LC180" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"<span class="pl-cce">\n</span>--- PHONEBOOK MENU ---"</span>)</div></div>
+<div class="react-no-virtualization-wrapper"><div id="LC181" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"1. Create table"</span>)</div>
+<div id="LC182" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"2. Insert contact from console"</span>)</div>
+<div id="LC183" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"3. Insert contacts from CSV"</span>)</div>
+<div id="LC184" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"4. Show all contacts"</span>)</div>
+<div id="LC185" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"5. Search contacts"</span>)</div>
+<div id="LC186" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"6. Update contact"</span>)</div>
+<div id="LC187" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"7. Delete contact"</span>)</div>
+<div id="LC188" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-en">print</span>(<span class="pl-s">"8. Exit"</span>)</div>
+<div id="LC189" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC190" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-s1">choice</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter your choice: "</span>)</div>
+<div id="LC191" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC192" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">if</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"1"</span>:</div>
+<div id="LC193" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">create_table</span>()</div>
+<div id="LC194" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC195" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"2"</span>:</div>
+<div id="LC196" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">name</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter name: "</span>)</div>
+<div id="LC197" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">phone</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter phone: "</span>)</div>
+<div id="LC198" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">insert_contact</span>(<span class="pl-s1">name</span>, <span class="pl-s1">phone</span>)</div>
+<div id="LC199" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC200" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"3"</span>:</div>
+<div id="LC201" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">filename</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter CSV filename: "</span>)</div>
+<div id="LC202" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">insert_from_csv</span>(<span class="pl-s1">filename</span>)</div>
+<div id="LC203" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC204" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"4"</span>:</div>
+<div id="LC205" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">show_contacts</span>()</div>
+<div id="LC206" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC207" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"5"</span>:</div>
+<div id="LC208" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">pattern</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter name or phone prefix: "</span>)</div>
+<div id="LC209" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">search_contact</span>(<span class="pl-s1">pattern</span>)</div>
+<div id="LC210" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC211" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"6"</span>:</div>
+<div id="LC212" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">contact_id</span> <span class="pl-c1">=</span> <span class="pl-en">int</span>(<span class="pl-en">input</span>(<span class="pl-s">"Enter contact id: "</span>))</div>
+<div id="LC213" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">new_name</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter new name: "</span>)</div>
+<div id="LC214" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">new_phone</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter new phone: "</span>)</div>
+<div id="LC215" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">update_contact</span>(<span class="pl-s1">contact_id</span>, <span class="pl-s1">new_name</span>, <span class="pl-s1">new_phone</span>)</div>
+<div id="LC216" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC217" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"7"</span>:</div>
+<div id="LC218" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-s1">value</span> <span class="pl-c1">=</span> <span class="pl-en">input</span>(<span class="pl-s">"Enter name or phone to delete: "</span>)</div>
+<div id="LC219" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">delete_contact</span>(<span class="pl-s1">value</span>)</div>
+<div id="LC220" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC221" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">elif</span> <span class="pl-s1">choice</span> <span class="pl-c1">==</span> <span class="pl-s">"8"</span>:</div>
+<div id="LC222" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-en">print</span>(<span class="pl-s">"Goodbye"</span>)</div>
+<div id="LC223" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">            <span class="pl-k">break</span></div>
+<div id="LC224" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">
+</div>
+<div id="LC225" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div child-of-line-177 ">        <span class="pl-k">else</span>:</div>
+<div id="LC226" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">            <span class="pl-en">print</span>(<span class="pl-s">"Invalid choice"</span>)</div>
+<div id="LC227" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC228" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">
+</div>
+<div id="LC229" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div "><span class="pl-k">if</span> <span class="pl-s1">__name__</span> <span class="pl-c1">==</span> <span class="pl-s">"__main__"</span>:</div>
+<div id="LC230" class="react-code-text react-code-line-contents-no-virtualization react-file-line html-div ">    <span class="pl-en">menu</span>()</div></div></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 80px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 560px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 980px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 1520px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 1980px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 2500px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 3020px; height: 20px;"></div><div class="symbol-highlight react-code-text StickyLineObserverOverlay-module__stickyLineObserver__rhc2u" data-testid="sticky-line-observer" style="top: 3520px; height: 20px;"></div></div><button hidden="" data-hotkey="Control+a"></button></div></div></div></div><div id="copilot-button-container"></div></div><div id="highlighted-line-menu-container"></div></div></div></section></div></div></div> </div>  </div></div></div></div></div></div><div class="ScrollMarksContainer-module__scrollMarksContainer__Eu7uU" id="find-result-marks-container"></div><button hidden="" data-testid="" data-hotkey-scope="read-only-cursor-text-area" data-hotkey="Control+F6,Control+Shift+F6"></button><button hidden="" data-hotkey="Control+F6,Control+Shift+F6"></button></div> <!-- --> <!-- --> <script type="application/json" id="__PRIMER_DATA__R_1___">{"resolvedServerColorMode":"night"}</script></div>
+</react-app>
+
+
+
+
+  </div>
+
+</turbo-frame>
+
+    </main>
+  </div>
+
+  </div>
+
+          <footer class="footer tmp-pt-7 tmp-pb-6 f6 color-fg-muted color-border-subtle p-responsive" role="contentinfo" hidden="">
+  <h2 class="sr-only">Footer</h2>
+
+  
+
+
+  <div class="d-flex flex-justify-center flex-items-center flex-column-reverse flex-lg-row flex-wrap flex-lg-nowrap">
+    <div class="d-flex flex-items-center flex-shrink-0 mx-2">
+      <a aria-label="GitHub Homepage" class="footer-octicon mr-2" href="https://github.com/">
+        <svg aria-hidden="true" height="24" viewBox="0 0 24 24" version="1.1" width="24" data-view-component="true" class="octicon octicon-mark-github">
+    <path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path>
+</svg>
+</a>
+      <span>
+        © 2026 GitHub,&nbsp;Inc.
+      </span>
+    </div>
+
+    <nav aria-label="Footer">
+      <h3 class="sr-only" id="sr-footer-heading">Footer navigation</h3>
+
+      <ul class="list-style-none d-flex flex-justify-center flex-wrap mb-2 mb-lg-0" aria-labelledby="sr-footer-heading">
+
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to Terms&quot;,&quot;label&quot;:&quot;text:terms&quot;}" href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" data-view-component="true" class="Link--secondary Link">Terms</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to privacy&quot;,&quot;label&quot;:&quot;text:privacy&quot;}" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" data-view-component="true" class="Link--secondary Link">Privacy</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to security&quot;,&quot;label&quot;:&quot;text:security&quot;}" href="https://github.com/security" data-view-component="true" class="Link--secondary Link">Security</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to status&quot;,&quot;label&quot;:&quot;text:status&quot;}" href="https://www.githubstatus.com/" data-view-component="true" class="Link--secondary Link">Status</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to community&quot;,&quot;label&quot;:&quot;text:community&quot;}" href="https://github.community/" data-view-component="true" class="Link--secondary Link">Community</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to docs&quot;,&quot;label&quot;:&quot;text:docs&quot;}" href="https://docs.github.com/" data-view-component="true" class="Link--secondary Link">Docs</a>
+          </li>
+
+          <li class="mx-2">
+            <a data-analytics-event="{&quot;category&quot;:&quot;Footer&quot;,&quot;action&quot;:&quot;go to contact&quot;,&quot;label&quot;:&quot;text:contact&quot;}" href="https://support.github.com/?tags=dotcom-footer" data-view-component="true" class="Link--secondary Link">Contact</a>
+          </li>
+
+          <li class="mx-2">
+  <cookie-consent-link data-catalyst="">
+    <button type="button" class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;cookies&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;cookies_link_subfooter_footer&quot;}">
+       Manage cookies
+    </button>
+  </cookie-consent-link>
+</li>
+
+<li class="mx-2">
+  <cookie-consent-link data-catalyst="">
+    <button type="button" class="Link--secondary underline-on-hover border-0 p-0 color-bg-transparent text-left" data-action="click:cookie-consent-link#showConsentManagement" data-analytics-event="{&quot;location&quot;:&quot;footer&quot;,&quot;action&quot;:&quot;dont_share_info&quot;,&quot;context&quot;:&quot;subfooter&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;dont_share_info_link_subfooter_footer&quot;}">
+      Do not share my personal information
+    </button>
+  </cookie-consent-link>
+</li>
+
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+
+    <ghcc-consent id="ghcc" class="position-fixed bottom-0 left-0" style="z-index: 999999" data-locale="en" data-initial-cookie-consent-allowed="" data-cookie-consent-required="false" data-catalyst=""></ghcc-consent>
+
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error" hidden="">
+    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-alert">
+    <path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+</svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+    <path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path>
+</svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+    <template id="site-details-dialog"></template>
+
+    <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box color-shadow-large" style="width:360px;"></div>
+</div>
+
+    <template id="snippet-clipboard-copy-button"></template>
+<template id="snippet-clipboard-copy-button-unpositioned"></template>
+
+
+    <style>
+      .user-mention[href$="/mirastolegen"] {
+        color: var(--color-user-mention-fg);
+        background-color: var(--bgColor-attention-muted, var(--color-attention-subtle));
+        border-radius: 2px;
+        margin-left: -2px;
+        margin-right: -2px;
+      }
+      .user-mention[href$="/mirastolegen"]:before,
+      .user-mention[href$="/mirastolegen"]:after {
+        content: '';
+        display: inline-block;
+        width: 2px;
+      }
+    </style>
+
+
+    </div>
+    <div id="js-global-screen-reader-notice" class="sr-only mt-n1" aria-live="polite" aria-atomic="true"></div>
+    <div id="js-global-screen-reader-notice-assertive" class="sr-only mt-n1" aria-live="assertive" aria-atomic="true"></div>
+  
+
+
+<div class="sr-only mt-n1" id="screenReaderAnnouncementDiv" role="alert" data-testid="screenReaderAnnouncement" aria-live="assertive"></div></body></html>
