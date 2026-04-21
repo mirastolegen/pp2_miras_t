@@ -14,7 +14,7 @@ RED = (213, 50, 80)
 BLACK = (0, 0, 0)
 font_style = pygame.font.SysFont("bahnschrift", 25)
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Escape from KBTU')
+pygame.display.set_caption('Bolatov GOAT')
 
 clock = pygame.time.Clock()
 game_started=False
